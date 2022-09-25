@@ -8,10 +8,10 @@ Mode 130,45
 setlocal EnableDelayedExpansion
 
 ::Make Directories
-mkdir C:\Hone >nul 2>&1
-mkdir C:\Hone\Resources >nul 2>&1
-mkdir C:\Hone\HoneRevert >nul 2>&1
-mkdir C:\Hone\Drivers >nul 2>&1
+mkdir C:\RivioxFPS >nul 2>&1
+mkdir C:\RivioxFPS\Resources >nul 2>&1
+mkdir C:\RivioxFPS\Revert >nul 2>&1
+mkdir C:\RivioxFPS\Drivers >nul 2>&1
 cd C:\Hone
 
 ::Run as Admin
@@ -29,7 +29,7 @@ Reg add HKCU\CONSOLE /v VirtualTerminalLevel /t REG_DWORD /d 1 /f >nul 2>&1
 
 
 :Disclaimer
-Reg query "HKCU\Software\Hone" /v "Disclaimer" >nul 2>&1 && goto CheckForUpdates
+Reg query "HKCU\Software\RivioxFPS" /v "Disclaimer" >nul 2>&1 && goto CheckForUpdates
 cls
 echo.
 echo.
@@ -82,7 +82,7 @@ del /Q "C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Program
 set local=2.55
 set localtwo=%local%
 if exist "%temp%\Updater.bat" DEL /S /Q /F "%temp%\Updater.bat" >nul 2>&1
-curl -g -L -# -o "%temp%\Updater.bat" "https://raw.githubusercontent.com/auraside/HoneCtrl/main/Files/HoneCtrlVer" >nul 2>&1
+curl -g -L -# -o "%temp%\Updater.bat" "https://raw.githubusercontent.com/RivioxGaming/Riviox-FPS/main/version" >nul 2>&1
 call "%temp%\Updater.bat"
 IF "%local%" gtr "%localtwo%" (
 	cls
@@ -104,7 +104,7 @@ IF "%local%" gtr "%localtwo%" (
 	choice /c:YN /n /m "%DEL%                                >:"
 	set choice=!errorlevel!
 	if !choice! equ 1 (
-		curl -L -o %0 "https://github.com/auraside/HoneCtrl/releases/latest/download/HoneCtrl.Bat" >nul 2>&1
+		curl -L -o %0 "https://github.com/RivioxGaming/Riviox-FPS/blob/main/HoneCtrl.bat" >nul 2>&1
 		call %0
 		exit /b
 	)
@@ -113,7 +113,7 @@ IF "%local%" gtr "%localtwo%" (
 
 ::Check If First Launch
 set firstlaunch=1
->nul 2>&1 call "C:\Hone\HoneRevert\firstlaunch.bat"
+>nul 2>&1 call "C:\RivioxFPS\Revert\firstlaunch.bat"
 if "%firstlaunch%" equ "0" (goto MainMenu)
 
 ::Restore Point
@@ -148,8 +148,8 @@ echo.                  `NMN:        +.                                          
 echo.                  om-                                                                   #######       #######
 echo.                   `.
 echo.
-echo                                        %COL%[90m HoneCtrl is a free and open-source desktop utility
-echo                                        %COL%[90m    made to improve your day-to-day productivity
+echo                                        %COL%[90m  Riviox FPS
+echo                                        %COL%[90m    %COL%[90m    Stworzony do boostowania FPS
 echo. 
 echo.
 echo.
@@ -205,8 +205,8 @@ echo.                  `NMN:        +.                                          
 echo.                  om-                                                                   #######       #######
 echo.                   `.
 echo.
-echo                                        %COL%[90m HoneCtrl is a free and open-source desktop utility
-echo                                        %COL%[90m    made to improve your day-to-day productivity
+echo                                         %COL%[90m Riviox FPS
+echo                                         %COL%[90m    Stworzony do boostowania FPS
 echo.
 echo.
 echo.
