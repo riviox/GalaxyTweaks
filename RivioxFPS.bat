@@ -31,21 +31,7 @@ Reg add HKCU\CONSOLE /v VirtualTerminalLevel /t REG_DWORD /d 1 /f >nul 2>&1
 :Disclaimer
 Reg query "HKCU\Software\RivioxFPS" /v "Disclaimer" >nul 2>&1 && goto CheckForUpdates
 cls
-echo.
-echo.
-echo.                                      %COL%[33m+N.
-echo.                           //        oMMs         
-echo.                          +Nm`    ``yMMm-     ::::::::     ::::    :::    :::::::::: 
-echo.                       ``dMMsoyhh-hMMd.     :+:    :+:    :+:+:   :+:    :+:  
-echo.                       `yy/MMMMNh:dMMh`    +:+    +:+    :+:+:+  +:+    +:+                 +::+:+::      +::+:+::
-echo.                      .hMM.sso++:oMMs`    +#+    +:+    +#+ +:+ +#+    +#++:++#           ++:    #++    ++:    #++
-echo.                     -mMMy:osyyys.No     +#+    +#+    +#+  +#+#+#    +#+                +#+    +#+    +#+    +#+
-echo.                    :NMMs-oo+/syy:-     #+#    #+#    #+#   #+#+#    #+#          %COL%[37m#+#%COL%[33m    +#+   #+#     #+#   #+#
-echo.                   /NMN+ ``   :ys.      ########     ###    ####    ##########   %COL%[37m###%COL%[33m       ######        ######
-echo.                  `NMN:        +.                                                      ##    ###     ##    ###
-echo.                  om-                                                                   #######       #######
-echo.                   `.
-echo.
+                                           type C:\RivioxFPS\Resources\logo.txt
 echo                                        %COL%[90m Riviox FPS
 echo                                        %COL%[90m    Stworzony do boostowania FPS
 echo.
@@ -61,7 +47,7 @@ echo     %COL%[33m2.%COL%[37m If you don't know what a tweak is, do not use it a
 echo.
 echo     %COL%[33m3.%COL%[37m Even though we have an automatic restore point feature, we highly recommend making a manual restore point before running.
 echo.
-echo   For any questions and/or concerns, please join our discord: discord.gg/hone
+echo   For any questions and/or concerns, please join our discord: Soon
 echo.
 echo   Please enter "I agree" without quotes to continue: 
 echo.
@@ -130,23 +116,10 @@ echo set "firstlaunch=0" > C:\Hone\HoneRevert\firstlaunch.bat
 
 :MainMenu
 Mode 130,45
-TITLE Hone Control Panel %localtwo%
+TITLE RivioxFPS control panel %localtwo%
 set "choice="
 cls
-echo.
-echo.
-echo.                                      %COL%[33m+N.
-echo.                           //        oMMs         
-echo.                          +Nm`    ``yMMm-     ::::::::     ::::    :::    :::::::::: 
-echo.                       ``dMMsoyhh-hMMd.     :+:    :+:    :+:+:   :+:    :+:  
-echo.                       `yy/MMMMNh:dMMh`    +:+    +:+    :+:+:+  +:+    +:+                 +::+:+::      +::+:+::
-echo.                      .hMM.sso++:oMMs`    +#+    +:+    +#+ +:+ +#+    +#++:++#           ++:    #++    ++:    #++
-echo.                     -mMMy:osyyys.No     +#+    +#+    +#+  +#+#+#    +#+                +#+    +#+    +#+    +#+
-echo.                    :NMMs-oo+/syy:-     #+#    #+#    #+#   #+#+#    #+#          %COL%[37m#+#%COL%[33m    +#+   #+#     #+#   #+#
-echo.                   /NMN+ ``   :ys.      ########     ###    ####    ##########   %COL%[37m###%COL%[33m       ######        ######
-echo.                  `NMN:        +.                                                      ##    ###     ##    ###
-echo.                  om-                                                                   #######       #######
-echo.                   `.
+                                        type C:\RivioxFPS\Resources\logo.txt                   `.
 echo.
 echo                                        %COL%[90m  Riviox FPS
 echo                                        %COL%[90m    %COL%[90m    Stworzony do boostowania FPS
@@ -190,20 +163,7 @@ goto MainMenu
 
 :Comingsoon
 cls
-echo.
-echo.
-echo.                                      %COL%[33m+N.
-echo.                           //        oMMs         
-echo.                          +Nm`    ``yMMm-     ::::::::     ::::    :::    :::::::::: 
-echo.                       ``dMMsoyhh-hMMd.     :+:    :+:    :+:+:   :+:    :+:  
-echo.                       `yy/MMMMNh:dMMh`    +:+    +:+    :+:+:+  +:+    +:+                 +::+:+::      +::+:+::
-echo.                      .hMM.sso++:oMMs`    +#+    +:+    +#+ +:+ +#+    +#++:++#           ++:    #++    ++:    #++
-echo.                     -mMMy:osyyys.No     +#+    +#+    +#+  +#+#+#    +#+                +#+    +#+    +#+    +#+
-echo.                    :NMMs-oo+/syy:-     #+#    #+#    #+#   #+#+#    #+#          %COL%[37m#+#%COL%[33m    +#+   #+#     #+#   #+#
-echo.                   /NMN+ ``   :ys.      ########     ###    ####    ##########   %COL%[37m###%COL%[33m       ######        ######
-echo.                  `NMN:        +.                                                      ##    ###     ##    ###
-echo.                  om-                                                                   #######       #######
-echo.                   `.
+                                        type C:\RivioxFPS\Resources\logo.txt                   `.
 echo.
 echo                                         %COL%[90m Riviox FPS
 echo                                         %COL%[90m    Stworzony do boostowania FPS
@@ -303,20 +263,7 @@ for %%i in (PWROF MEMOF TMROF NETOF AFFOF MOUOF AFTOF NICOF DSSOF SERVOF DEBOF M
 goto %PG%
 :TweaksPG1
 cls
-echo.
-echo                                                                                                                        %COL%[36mPage 1/2
-echo.                                      %COL%[33m+N.
-echo.                           //        oMMs         
-echo.                          +Nm`    ``yMMm-     ::::::::     ::::    :::    :::::::::: 
-echo.                       ``dMMsoyhh-hMMd.     :+:    :+:    :+:+:   :+:    :+:  
-echo.                       `yy/MMMMNh:dMMh`    +:+    +:+    :+:+:+  +:+    +:+                 +::+:+::      +::+:+::
-echo.                      .hMM.sso++:oMMs`    +#+    +:+    +#+ +:+ +#+    +#++:++#           ++:    #++    ++:    #++
-echo.                     -mMMy:osyyys.No     +#+    +#+    +#+  +#+#+#    +#+                +#+    +#+    +#+    +#+
-echo.                    :NMMs-oo+/syy:-     #+#    #+#    #+#   #+#+#    #+#          %COL%[37m#+#%COL%[33m    +#+   #+#     #+#   #+#
-echo.                   /NMN+ ``   :ys.      ########     ###    ####    ##########   %COL%[37m###%COL%[33m       ######        ######
-echo.                  `NMN:        +.                                                      ##    ###     ##    ###
-echo.                  om-                                                                   #######       #######
-echo.                   `.
+                                        type C:\RivioxFPS\Resources\logo.txt                   `.
 echo                                                               %COL%[1;4;34mTweaks%COL%[0m
 echo.
 echo              %COL%[33m[%COL%[37m 1 %COL%[33m]%COL%[37m Power Plan %PWROF%                 %COL%[33m[%COL%[37m 2 %COL%[33m]%COL%[37m SvcHostSplitThreshold %MEMOF%      %COL%[33m[%COL%[37m 3 %COL%[33m]%COL%[37m CSRSS High Priority %CRSOF%
@@ -369,20 +316,7 @@ goto Tweaks
 
 :TweaksPG2
 cls
-echo.
-echo                                                                                                                        %COL%[36mPage 2/2
-echo.                                      %COL%[33m+N.
-echo.                           //        oMMs         
-echo.                          +Nm`    ``yMMm-     ::::::::     ::::    :::    :::::::::: 
-echo.                       ``dMMsoyhh-hMMd.     :+:    :+:    :+:+:   :+:    :+:  
-echo.                       `yy/MMMMNh:dMMh`    +:+    +:+    :+:+:+  +:+    +:+                 +::+:+::      +::+:+::
-echo.                      .hMM.sso++:oMMs`    +#+    +:+    +#+ +:+ +#+    +#++:++#           ++:    #++    ++:    #++
-echo.                     -mMMy:osyyys.No     +#+    +#+    +#+  +#+#+#    +#+                +#+    +#+    +#+    +#+
-echo.                    :NMMs-oo+/syy:-     #+#    #+#    #+#   #+#+#    #+#          %COL%[37m#+#%COL%[33m    +#+   #+#     #+#   #+#
-echo.                   /NMN+ ``   :ys.      ########     ###    ####    ##########   %COL%[37m###%COL%[33m       ######        ######
-echo.                  `NMN:        +.                                                      ##    ###     ##    ###
-echo.                  om-                                                                   #######       #######
-echo.                   `.
+                                        type C:\RivioxFPS\Resources\logo.txt                   `.
 echo                                                               %COL%[1;4;34mBloat%COL%[0m
 echo.
 echo              %COL%[33m[%COL%[37m 1 %COL%[33m]%COL%[37m Disable Services %COL%[93mN/A           %COL%[33m[%COL%[37m 2 %COL%[33m]%COL%[37m Debloat %COL%[93mN/A                    %COL%[33m[%COL%[37m 3 %COL%[33m]%COL%[37m Disable Mitigations %MITOF%
@@ -432,20 +366,7 @@ goto TweaksPG2
 
 :TweaksPG3
 cls
-echo.
-echo.
-echo.                                      %COL%[33m+N.
-echo.                           //        oMMs         
-echo.                          +Nm`    ``yMMm-     ::::::::     ::::    :::    :::::::::: 
-echo.                       ``dMMsoyhh-hMMd.     :+:    :+:    :+:+:   :+:    :+:  
-echo.                       `yy/MMMMNh:dMMh`    +:+    +:+    :+:+:+  +:+    +:+                 +::+:+::      +::+:+::
-echo.                      .hMM.sso++:oMMs`    +#+    +:+    +#+ +:+ +#+    +#++:++#           ++:    #++    ++:    #++
-echo.                     -mMMy:osyyys.No     +#+    +#+    +#+  +#+#+#    +#+                +#+    +#+    +#+    +#+
-echo.                    :NMMs-oo+/syy:-     #+#    #+#    #+#   #+#+#    #+#          %COL%[37m#+#%COL%[33m    +#+   #+#     #+#   #+#
-echo.                   /NMN+ ``   :ys.      ########     ###    ####    ##########   %COL%[37m###%COL%[33m       ######        ######
-echo.                  `NMN:        +.                                                      ##    ###     ##    ###
-echo.                  om-                                                                   #######       #######
-echo.                   `.
+                                        type C:\RivioxFPS\Resources\logo.txt                   `.
 rem echo                                                           %COL%[1;4;34mLatency Tweaks%COL%[0m
 rem echo.
 rem echo              %COL%[33m[%COL%[37m 3 %COL%[33m]%COL%[37m Disable USB Power Savings %BLANK%  %COL%[33m[%COL%[37m 4 %COL%[33m]%COL%[37m CSRSS high priority %BLANK%        %COL%[33m[%COL%[37m 5 %COL%[33m]%COL%[37m Disable HPET %BLANK%
@@ -1429,24 +1350,7 @@ goto Tweaks
 
 :W32PrioSep
 cls
-echo.
-echo.
-echo.
-echo.
-echo.                                                                          %COL%[33m.  
-echo.                                                                       +N. 
-echo.                                                              //        oMMs 
-echo.                                                             +Nm`    ``yMMm- 
-echo.                                                          ``dMMsoyhh-hMMd.  
-echo.                                                          `yy/MMMMNh:dMMh`   
-echo.                                                         .hMM.sso++:oMMs`    
-echo.                                                        -mMMy:osyyys.No      
-echo.                                                       :NMMs-oo+/syy:-       
-echo.                                                      /NMN+ ``   :ys.        
-echo.                                                     `NMN:        +.         
-echo.                                                     om-                    
-echo.                                                      `.                                            
-echo. 
+                                        type C:\RivioxFPS\Resources\logo_small.txt
 echo. 
 echo. 
 echo.
@@ -1650,20 +1554,7 @@ pause
 
 cls
 color 06
-echo.
-echo.
-echo.                                      %COL%[33m+N.
-echo.                           //        oMMs         
-echo.                          +Nm`    ``yMMm-     ::::::::     ::::    :::    :::::::::: 
-echo.                       ``dMMsoyhh-hMMd.     :+:    :+:    :+:+:   :+:    :+:  
-echo.                       `yy/MMMMNh:dMMh`    +:+    +:+    :+:+:+  +:+    +:+                 +::+:+::      +::+:+::
-echo.                      .hMM.sso++:oMMs`    +#+    +:+    +#+ +:+ +#+    +#++:++#           ++:    #++    ++:    #++
-echo.                     -mMMy:osyyys.No     +#+    +#+    +#+  +#+#+#    +#+                +#+    +#+    +#+    +#+
-echo.                    :NMMs-oo+/syy:-     #+#    #+#    #+#   #+#+#    #+#          %COL%[37m#+#%COL%[33m    +#+   #+#     #+#   #+#
-echo.                   /NMN+ ``   :ys.      ########     ###    ####    ##########   %COL%[37m###%COL%[33m       ######        ######
-echo.                  `NMN:        +.                                                      ##    ###     ##    ###
-echo.                  om-                                                                   #######       #######
-echo.                   `.                                      %COL%[34m%COL%[1mOBS Settings%COL%[0m
+                                        type C:\RivioxFPS\Resources\logo.txt                   `.                                      %COL%[34m%COL%[1mOBS Settings%COL%[0m
 echo.
 echo              %COL%[33m[ %COL%[37m1 %COL%[33m]%COL%[37m Install/Update OBS             %COL%[33m[ %COL%[37m2 %COL%[33m]%COL%[37m Recording                      %COL%[33m[ %COL%[37m3 %COL%[33m]%COL%[37m Streaming
 echo              %COL%[90mAutomatically install or update      %COL%[90mAutomated recording settings for     %COL%[90mAutomated streaming settings for
@@ -1725,21 +1616,7 @@ goto:eof
 :Recording
 cls
 color 06
-echo.
-echo.
-echo.                                      %COL%[33m+N.
-echo.                           //        oMMs         
-echo.                          +Nm`    ``yMMm-     ::::::::     ::::    :::    :::::::::: 
-echo.                       ``dMMsoyhh-hMMd.     :+:    :+:    :+:+:   :+:    :+:  
-echo.                       `yy/MMMMNh:dMMh`    +:+    +:+    :+:+:+  +:+    +:+                 +::+:+::      +::+:+::
-echo.                      .hMM.sso++:oMMs`    +#+    +:+    +#+ +:+ +#+    +#++:++#           ++:    #++    ++:    #++
-echo.                     -mMMy:osyyys.No     +#+    +#+    +#+  +#+#+#    +#+                +#+    +#+    +#+    +#+
-echo.                    :NMMs-oo+/syy:-     #+#    #+#    #+#   #+#+#    #+#          %COL%[37m#+#%COL%[33m    +#+   #+#     #+#   #+#
-echo.                   /NMN+ ``   :ys.      ########     ###    ####    ##########   %COL%[37m###%COL%[33m       ######        ######
-echo.                  `NMN:        +.                                                      ##    ###     ##    ###
-echo.                  om-                                                                   #######       #######
-echo.                   `.
-echo.
+                                        type C:\RivioxFPS\Resources\logo.txt
 echo              %COL%[33m[ %COL%[37m1 %COL%[33m]%COL%[37m Quality                        %COL%[33m[ %COL%[37m2 %COL%[33m]%COL%[37m Optimal                        %COL%[33m[ %COL%[37m3 %COL%[33m]%COL%[37m Performance
 echo              %COL%[90mSettings for the best                %COL%[90mThe best for performance             %COL%[90mSettings for the best
 echo              %COL%[90mquality in OBS                       %COL%[90mwithout losing any quality           %COL%[90mperformance in OBS
@@ -1947,21 +1824,8 @@ IF %encoder% equ NVENC (
 :Streaming
 cls
 color 06
-echo.
-echo.
-echo.                                      %COL%[33m+N.
-echo.                           //        oMMs         
-echo.                          +Nm`    ``yMMm-     ::::::::     ::::    :::    :::::::::: 
-echo.                       ``dMMsoyhh-hMMd.     :+:    :+:    :+:+:   :+:    :+:  
-echo.                       `yy/MMMMNh:dMMh`    +:+    +:+    :+:+:+  +:+    +:+                 +::+:+::      +::+:+::
-echo.                      .hMM.sso++:oMMs`    +#+    +:+    +#+ +:+ +#+    +#++:++#           ++:    #++    ++:    #++
-echo.                     -mMMy:osyyys.No     +#+    +#+    +#+  +#+#+#    +#+                +#+    +#+    +#+    +#+
-echo.                    :NMMs-oo+/syy:-     #+#    #+#    #+#   #+#+#    #+#          %COL%[37m#+#%COL%[33m    +#+   #+#     #+#   #+#
-echo.                   /NMN+ ``   :ys.      ########     ###    ####    ##########   %COL%[37m###%COL%[33m       ######        ######
-echo.                  `NMN:        +.                                                      ##    ###     ##    ###
-echo.                  om-                                                                   #######       #######
-echo.                   `.
-echo.
+                                        type C:\RivioxFPS\Resources\logo.txt
+
 echo                              %COL%[33m[ %COL%[37m1 %COL%[33m]%COL%[37m Quality                                        %COL%[33m[ %COL%[37m2 %COL%[33m]%COL%[37m Performance
 echo                              %COL%[90mSettings for the best                                %COL%[90mSettings for the best
 echo                              %COL%[90mquality in OBS                                       %COL%[90mperformance in OBS
@@ -2110,20 +1974,7 @@ IF %encoder% equ NVENC (
 if not exist %SystemDrive%\ffmpeg ( call:ffmpeginstall )
 cls
 color 06
-echo.
-echo.
-echo.                                      %COL%[33m+N.
-echo.                           //        oMMs         
-echo.                          +Nm`    ``yMMm-     ::::::::     ::::    :::    :::::::::: 
-echo.                       ``dMMsoyhh-hMMd.     :+:    :+:    :+:+:   :+:    :+:  
-echo.                       `yy/MMMMNh:dMMh`    +:+    +:+    :+:+:+  +:+    +:+                 +::+:+::      +::+:+::
-echo.                      .hMM.sso++:oMMs`    +#+    +:+    +#+ +:+ +#+    +#++:++#           ++:    #++    ++:    #++
-echo.                     -mMMy:osyyys.No     +#+    +#+    +#+  +#+#+#    +#+                +#+    +#+    +#+    +#+
-echo.                    :NMMs-oo+/syy:-     #+#    #+#    #+#   #+#+#    #+#          %COL%[37m#+#%COL%[33m    +#+   #+#     #+#   #+#
-echo.                   /NMN+ ``   :ys.      ########     ###    ####    ##########   %COL%[37m###%COL%[33m       ######        ######
-echo.                  `NMN:        +.                                                      ##    ###     ##    ###
-echo.                  om-                                                                   #######       #######
-echo.                   `.
+                                        type C:\RivioxFPS\Resources\logo.txt                   `.
 echo.
 echo                            %COL%[33m[ %COL%[37m1 %COL%[33m]%COL%[37m 4k                                             %COL%[33m[ %COL%[37m2 %COL%[33m]%COL%[37m 8k
 echo                            %COL%[90mModify the scale of a video                          %COL%[90mModify the scale of a video
@@ -2180,21 +2031,7 @@ goto upscale
 if not exist %SystemDrive%\ffmpeg ( call:ffmpeginstall )
 cls
 color 06
-echo.
-echo.
-echo.                                      %COL%[33m+N.
-echo.                           //        oMMs         
-echo.                          +Nm`    ``yMMm-     ::::::::     ::::    :::    :::::::::: 
-echo.                       ``dMMsoyhh-hMMd.     :+:    :+:    :+:+:   :+:    :+:  
-echo.                       `yy/MMMMNh:dMMh`    +:+    +:+    :+:+:+  +:+    +:+                 +::+:+::      +::+:+::
-echo.                      .hMM.sso++:oMMs`    +#+    +:+    +#+ +:+ +#+    +#++:++#           ++:    #++    ++:    #++
-echo.                     -mMMy:osyyys.No     +#+    +#+    +#+  +#+#+#    +#+                +#+    +#+    +#+    +#+
-echo.                    :NMMs-oo+/syy:-     #+#    #+#    #+#   #+#+#    #+#          %COL%[37m#+#%COL%[33m    +#+   #+#     #+#   #+#
-echo.                   /NMN+ ``   :ys.      ########     ###    ####    ##########   %COL%[37m###%COL%[33m       ######        ######
-echo.                  `NMN:        +.                                                      ##    ###     ##    ###
-echo.                  om-                                                                   #######       #######
-echo.                   `.
-echo.
+                                        type C:\RivioxFPS\Resources\logo.txt
 echo                         %COL%[33m[ %COL%[37m1 %COL%[33m]%COL%[37m Heavy                                          %COL%[33m[ %COL%[37m2 %COL%[33m]%COL%[37m Light
 echo                         %COL%[90mLower the scale ^& fps of a video                     %COL%[90mLower only the scale of a video
 echo                         %COL%[90mto make it take up much less space                   %COL%[90mto make it take up less space
@@ -2278,21 +2115,7 @@ goto:eof
 :FPSGames
 cls
 color 06
-echo.
-echo.
-echo.                                      %COL%[33m+N.
-echo.                           //        oMMs         
-echo.                          +Nm`    ``yMMm-     ::::::::     ::::    :::    :::::::::: 
-echo.                       ``dMMsoyhh-hMMd.     :+:    :+:    :+:+:   :+:    :+:  
-echo.                       `yy/MMMMNh:dMMh`    +:+    +:+    :+:+:+  +:+    +:+                 +::+:+::      +::+:+::
-echo.                      .hMM.sso++:oMMs`    +#+    +:+    +#+ +:+ +#+    +#++:++#           ++:    #++    ++:    #++
-echo.                     -mMMy:osyyys.No     +#+    +#+    +#+  +#+#+#    +#+                +#+    +#+    +#+    +#+
-echo.                    :NMMs-oo+/syy:-     #+#    #+#    #+#   #+#+#    #+#          %COL%[37m#+#%COL%[33m    +#+   #+#     #+#   #+#
-echo.                   /NMN+ ``   :ys.      ########     ###    ####    ##########   %COL%[37m###%COL%[33m       ######        ######
-echo.                  `NMN:        +.                                                      ##    ###     ##    ###
-echo.                  om-                                                                   #######       #######
-echo.                   `.
-echo.
+                                        type C:\RivioxFPS\Resources\logo.txt
 echo                       %COL%[33m[ %COL%[37m1 %COL%[33m]%COL%[37m 60 - 120 FPS                                   %COL%[33m[ %COL%[37m2 %COL%[33m]%COL%[37m 240+ FPS
 echo                       %COL%[90mAutomated Blur settings                              %COL%[90mAutomated Blur settings
 echo                       %COL%[90mfor FPS games recorded in 60 to 120 FPS              %COL%[90mfor FPS games recorded in above 240 FPS
@@ -2625,21 +2448,7 @@ goto HoneRenders
 :MinecraftBlur
 cls
 color 06
-echo.
-echo.
-echo.                                      %COL%[33m+N.
-echo.                           //        oMMs         
-echo.                          +Nm`    ``yMMm-     ::::::::     ::::    :::    :::::::::: 
-echo.                       ``dMMsoyhh-hMMd.     :+:    :+:    :+:+:   :+:    :+:  
-echo.                       `yy/MMMMNh:dMMh`    +:+    +:+    :+:+:+  +:+    +:+                 +::+:+::      +::+:+::
-echo.                      .hMM.sso++:oMMs`    +#+    +:+    +#+ +:+ +#+    +#++:++#           ++:    #++    ++:    #++
-echo.                     -mMMy:osyyys.No     +#+    +#+    +#+  +#+#+#    +#+                +#+    +#+    +#+    +#+
-echo.                    :NMMs-oo+/syy:-     #+#    #+#    #+#   #+#+#    #+#          %COL%[37m#+#%COL%[33m    +#+   #+#     #+#   #+#
-echo.                   /NMN+ ``   :ys.      ########     ###    ####    ##########   %COL%[37m###%COL%[33m       ######        ######
-echo.                  `NMN:        +.                                                      ##    ###     ##    ###
-echo.                  om-                                                                   #######       #######
-echo.                   `.
-echo.
+                                        type C:\RivioxFPS\Resources\logo.txt
 echo         %COL%[33m[ %COL%[37m1 %COL%[33m]%COL%[37m 180 - 360 FPS                       %COL%[33m[ %COL%[37m2 %COL%[33m]%COL%[37m 480+ FPS                        %COL%[33m[ %COL%[37m3 %COL%[33m]%COL%[37m Any FPS (30 FPS Renders)
 echo         %COL%[90mAutomated Blur settings                   %COL%[90mAutomated Blur settings               %COL%[90mAutomated Blur settings
 echo         %COL%[90mfor clips recorded in 180 - 360 FPS       %COL%[90mfor clips recorded above 480 FPS      %COL%[90mfor clips to be rendered in 30 FPS
@@ -3119,20 +2928,7 @@ goto HoneRenders
 :NLEInstall
 cls
 color 06
-echo.
-echo.
-echo.                                      %COL%[33m+N.
-echo.                           //        oMMs         
-echo.                          +Nm`    ``yMMm-     ::::::::     ::::    :::    :::::::::: 
-echo.                       ``dMMsoyhh-hMMd.     :+:    :+:    :+:+:   :+:    :+:  
-echo.                       `yy/MMMMNh:dMMh`    +:+    +:+    :+:+:+  +:+    +:+                 +::+:+::      +::+:+::
-echo.                      .hMM.sso++:oMMs`    +#+    +:+    +#+ +:+ +#+    +#++:++#           ++:    #++    ++:    #++
-echo.                     -mMMy:osyyys.No     +#+    +#+    +#+  +#+#+#    +#+                +#+    +#+    +#+    +#+
-echo.                    :NMMs-oo+/syy:-     #+#    #+#    #+#   #+#+#    #+#          %COL%[37m#+#%COL%[33m    +#+   #+#     #+#   #+#
-echo.                   /NMN+ ``   :ys.      ########     ###    ####    ##########   %COL%[37m###%COL%[33m       ######        ######
-echo.                  `NMN:        +.                                                      ##    ###     ##    ###
-echo.                  om-                                                                   #######       #######
-echo.                   `.
+                                        type C:\RivioxFPS\Resources\logo.txt                   `.
 echo                       %COL%[90mUnfortunately, Hone cannot supply unofficial distributions of software. If you 
 echo                       %COL%[90mcannot buy Vegas Pro, an alternative that we recommend is a freemium video editing software
 echo                       %COL%[90mcalled 'DaVinci Resolve' (note: this program does not contain render settings)^^!
@@ -3214,20 +3010,7 @@ goto HoneRenders
 :Disclaimer2
 Reg query "HKCU\Software\Hone" /v "Disclaimer2" >nul 2>&1 && goto Advanced
 cls
-echo.
-echo.
-echo.                                      %COL%[33m+N.
-echo.                           //        oMMs         
-echo.                          +Nm`    ``yMMm-     ::::::::     ::::    :::    :::::::::: 
-echo.                       ``dMMsoyhh-hMMd.     :+:    :+:    :+:+:   :+:    :+:  
-echo.                       `yy/MMMMNh:dMMh`    +:+    +:+    :+:+:+  +:+    +:+                 +::+:+::      +::+:+::
-echo.                      .hMM.sso++:oMMs`    +#+    +:+    +#+ +:+ +#+    +#++:++#           ++:    #++    ++:    #++
-echo.                     -mMMy:osyyys.No     +#+    +#+    +#+  +#+#+#    +#+                +#+    +#+    +#+    +#+
-echo.                    :NMMs-oo+/syy:-     #+#    #+#    #+#   #+#+#    #+#          %COL%[37m#+#%COL%[33m    +#+   #+#     #+#   #+#
-echo.                   /NMN+ ``   :ys.      ########     ###    ####    ##########   %COL%[37m###%COL%[33m       ######        ######
-echo.                  `NMN:        +.                                                      ##    ###     ##    ###
-echo.                  om-                                                                   #######       #######
-echo.                   `.
+                                        type C:\RivioxFPS\Resources\logo.txt                   `.
 echo.
 echo                                        %COL%[90m HoneCtrl is a free and open-source desktop utility
 echo                                        %COL%[90m    made to improve your day-to-day productivity
@@ -3288,20 +3071,7 @@ for %%i in (DSCOF AUTOF DRIOF BCDOF NONOF CS0OF TOFOF PS0OF IDLOF CONG DPSOF) do
 	if "!NVIDIAGPU!" neq "Found" for %%g in (PS0OF DRIOF) do set "%%g=%COL%[93mN/A"
 ) >nul 2>&1
 cls
-echo.
-echo.
-echo.                                      %COL%[33m+N.
-echo.                           //        oMMs         
-echo.                          +Nm`    ``yMMm-     ::::::::     ::::    :::    :::::::::: 
-echo.                       ``dMMsoyhh-hMMd.     :+:    :+:    :+:+:   :+:    :+:  
-echo.                       `yy/MMMMNh:dMMh`    +:+    +:+    :+:+:+  +:+    +:+                 +::+:+::      +::+:+::
-echo.                      .hMM.sso++:oMMs`    +#+    +:+    +#+ +:+ +#+    +#++:++#           ++:    #++    ++:    #++
-echo.                     -mMMy:osyyys.No     +#+    +#+    +#+  +#+#+#    +#+                +#+    +#+    +#+    +#+
-echo.                    :NMMs-oo+/syy:-     #+#    #+#    #+#   #+#+#    #+#          %COL%[37m#+#%COL%[33m    +#+   #+#     #+#   #+#
-echo.                   /NMN+ ``   :ys.      ########     ###    ####    ##########   %COL%[37m###%COL%[33m       ######        ######
-echo.                  `NMN:        +.                                                      ##    ###     ##    ###
-echo.                  om-                                                                   #######       #######
-echo.                   `.
+                                        type C:\RivioxFPS\Resources\logo.txt                   `.
 echo                                                           %COL%[1;4;34mNetwork Tweaks%COL%[0m
 echo.
 echo              %COL%[33m[%COL%[37m 1 %COL%[33m]%COL%[37m Disable Task Offloading %TOFOF%    %COL%[33m[%COL%[37m 2 %COL%[33m]%COL%[37m NonBestEffortLimit %NONOF%         %COL%[33m[%COL%[37m 3 %COL%[33m]%COL%[37m AutoTuning %AUTOF%
@@ -3518,20 +3288,7 @@ goto Advanced
 
 :GameSettings
 cls
-echo.
-echo.
-echo.                                      %COL%[33m+N.
-echo.                           //        oMMs         
-echo.                          +Nm`    ``yMMm-     ::::::::     ::::    :::    :::::::::: 
-echo.                       ``dMMsoyhh-hMMd.     :+:    :+:    :+:+:   :+:    :+:  
-echo.                       `yy/MMMMNh:dMMh`    +:+    +:+    :+:+:+  +:+    +:+                 +::+:+::      +::+:+::
-echo.                      .hMM.sso++:oMMs`    +#+    +:+    +#+ +:+ +#+    +#++:++#           ++:    #++    ++:    #++
-echo.                     -mMMy:osyyys.No     +#+    +#+    +#+  +#+#+#    +#+                +#+    +#+    +#+    +#+
-echo.                    :NMMs-oo+/syy:-     #+#    #+#    #+#   #+#+#    #+#          %COL%[37m#+#%COL%[33m    +#+   #+#     #+#   #+#
-echo.                   /NMN+ ``   :ys.      ########     ###    ####    ##########   %COL%[37m###%COL%[33m       ######        ######
-echo.                  `NMN:        +.                                                      ##    ###     ##    ###
-echo.                  om-                                                                   #######       #######
-echo.                   `.
+                                        type C:\RivioxFPS\Resources\logo.txt                  `.
 echo.
 echo.
 echo.
@@ -3570,23 +3327,7 @@ if "%choice%"=="3" exit /b
 if not exist "%appdata%\.minecraft\" call:HoneCtrlError "Can't find your Minecraft installation." & goto GameSettings
 
 cls
-echo.
-echo.
-echo.
-echo.
-echo.                                                                           %COL%[33m.  
-echo.                                                                        +N. 
-echo.                                                               //        oMMs 
-echo.                                                              +Nm`    ``yMMm- 
-echo.                                                           ``dMMsoyhh-hMMd.  
-echo.                                                           `yy/MMMMNh:dMMh`   
-echo.                                                          .hMM.sso++:oMMs`    
-echo.                                                         -mMMy:osyyys.No      
-echo.                                                        :NMMs-oo+/syy:-       
-echo.                                                       /NMN+ ``   :ys.        
-echo.                                                      `NMN:        +.         
-echo.                                                      om-                    
-echo.                                                       `.                                            
+                                        type C:\RivioxFPS\Resources\logo_small.txt                                                      `.                                            
 echo. 
 echo. 
 echo. 
@@ -3625,24 +3366,7 @@ if %choice% equ 5 exit /b
 
 :MinecraftConfirmation
 cls
-echo.
-echo.
-echo.
-echo.
-echo.                                                                           %COL%[33m.  
-echo.                                                                        +N. 
-echo.                                                               //        oMMs 
-echo.                                                              +Nm`    ``yMMm- 
-echo.                                                           ``dMMsoyhh-hMMd.  
-echo.                                                           `yy/MMMMNh:dMMh`   
-echo.                                                          .hMM.sso++:oMMs`    
-echo.                                                         -mMMy:osyyys.No      
-echo.                                                        :NMMs-oo+/syy:-       
-echo.                                                       /NMN+ ``   :ys.        
-echo.                                                      `NMN:        +.         
-echo.                                                      om-                    
-echo.                                                       `.                                            
-echo. 
+                                        type C:\RivioxFPS\Resources\logo_small.txt 
 echo. 
 echo. 
 echo. 
@@ -3884,25 +3608,7 @@ goto MinecraftConfirmation
 goto MainMenu
 
 :More
-cls
-echo.
-echo.
-echo.
-echo.
-echo.                                                                           %COL%[33m.  
-echo.                                                                          +N. 
-echo.                                                               //        oMMs 
-echo.                                                              +Nm`    ``yMMm- 
-echo.                                                           ``dMMsoyhh-hMMd.  
-echo.                                                           `yy/MMMMNh:dMMh`   
-echo.                                                          .hMM.sso++:oMMs`    
-echo.                                                         -mMMy:osyyys.No      
-echo.                                                        :NMMs-oo+/syy:-       
-echo.                                                       /NMN+ ``   :ys.        
-echo.                                                      `NMN:        +.         
-echo.                                                      om-                    
-echo.                                                       `.                                            
-echo. 
+                                        type C:\RivioxFPS\Resources\logo_small.txt
 echo. 
 echo.
 echo                  %COL%[33m[ %COL%[37m1 %COL%[33m] %COL%[37mAbout                                                   %COL%[33m[ %COL%[37m2 %COL%[33m] %COL%[37mDisclaimer
@@ -3954,22 +3660,7 @@ if "%choice%"=="1" goto More
 
 :ViewDisclaimer
 cls
-echo.
-echo.
-echo.                                      %COL%[33m+N.
-echo.                           //        oMMs         
-echo.                          +Nm`    ``yMMm-     ::::::::     ::::    :::    :::::::::: 
-echo.                       ``dMMsoyhh-hMMd.     :+:    :+:    :+:+:   :+:    :+:  
-echo.                       `yy/MMMMNh:dMMh`    +:+    +:+    :+:+:+  +:+    +:+                 +::+:+::      +::+:+::
-echo.                      .hMM.sso++:oMMs`    +#+    +:+    +#+ +:+ +#+    +#++:++#           ++:    #++    ++:    #++
-echo.                     -mMMy:osyyys.No     +#+    +#+    +#+  +#+#+#    +#+                +#+    +#+    +#+    +#+
-echo.                    :NMMs-oo+/syy:-     #+#    #+#    #+#   #+#+#    #+#          %COL%[37m#+#%COL%[33m    +#+   #+#     #+#   #+#
-echo.                   /NMN+ ``   :ys.      ########     ###    ####    ##########   %COL%[37m###%COL%[33m       ######        ######
-echo.                  `NMN:        +.                                                      ##    ###     ##    ###
-echo.                  om-                                                                   #######       #######
-echo.                   `.
-echo.
-echo                                        %COL%[90m HoneCtrl is a free and open-source desktop utility
+                                        type C:\RivioxFPS\Resources\logo_small.txt                                        %COL%[90m HoneCtrl is a free and open-source desktop utility
 echo                                        %COL%[90m    made to improve your day-to-day productivity
 echo.
 echo.
