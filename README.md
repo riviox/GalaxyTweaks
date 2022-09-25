@@ -5,3 +5,4 @@
 ![image](https://user-images.githubusercontent.com/100956266/192156070-807ba0e7-a232-4b42-8840-09b778df4ee4.png)
 ### własny autoupdater
 ### Oryginał: [HoneCrtl](https://github.com/auraside/HoneCtrl)
+#### oczywiście jest to faza beta więc są błędy...
