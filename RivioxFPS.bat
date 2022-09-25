@@ -12,7 +12,7 @@ mkdir C:\RivioxFPS >nul 2>&1
 mkdir C:\RivioxFPS\Resources >nul 2>&1
 mkdir C:\RivioxFPS\Revert >nul 2>&1
 mkdir C:\RivioxFPS\Drivers >nul 2>&1
-cd C:\Hone
+cd C:\RivioxFPS
 
 ::Run as Admin
 Reg.exe add HKLM /F >nul 2>&1
