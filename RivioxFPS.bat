@@ -90,7 +90,7 @@ IF "%local%" gtr "%localtwo%" (
 	choice /c:YN /n /m "%DEL%                                >:"
 	set choice=!errorlevel!
 	if !choice! equ 1 (
-		curl -L -o %0 "https://github.com/RivioxGaming/Riviox-FPS/blob/main/HoneCtrl.bat" >nul 2>&1
+		curl -L -o %0 "https://github.com/RivioxGaming/Riviox-FPS/blob/main/RivioxFPS.bat" >nul 2>&1
 		call %0
 		exit /b
 	)
