@@ -1,7 +1,6 @@
-# Riviox-FPS
+# GalaxyFPS
 ## Your new FPS Tweaker!
-## It will turn your life uʍop ǝpısdn!
 ## Custom ISO support!
-![image](https://user-images.githubusercontent.com/100956266/207670242-56dfcb3d-46e1-484e-9a98-d6389ee9c964.png)
+![image](https://user-images.githubusercontent.com/100956266/210133118-601c9f50-9cd3-4b8a-aed5-dfde34de9ab1.png)
 
 credit: [storm.wrld](https://github.com/stormwrld) I was inspired by the SERVE menu
