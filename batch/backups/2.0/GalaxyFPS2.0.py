@@ -23,7 +23,7 @@ if response.status_code == 200:
         file.write(response.content)
 
 # Otwarcie pliku z nową wersją i aktualizacja, jeśli jest nowa wersja dostępna
-local = "2.1"
+local = "2.0"
 if os.path.exists(temp_version_file):
     with open(temp_version_file, "r") as file:
         new_version = file.read().strip()
