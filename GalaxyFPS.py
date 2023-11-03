@@ -22,7 +22,6 @@ if response.status_code == 200:
     with open(temp_version_file, 'wb') as file:
         file.write(response.content)
 
-# Otwarcie pliku z nową wersją i aktualizacja, jeśli jest nowa wersja dostępna
 local = "2.1"
 if os.path.exists(temp_version_file):
     with open(temp_version_file, "r") as file:
@@ -110,7 +109,6 @@ while True:
         os.system('timeout 3 >nul')
 
     elif choice == "5":
-        # Informacje
         print("Version: " + local)
         print("Author: RivioxGaming#4176")
         print("Credits: caxzy#3907 for autoupdater from ZTweaks :trollface:")
