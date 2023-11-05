@@ -40,6 +40,8 @@ if os.path.exists(temp_version_file):
                     subprocess.call([__file__])
                     exit()
 while True:
+    usr = os.getenv("USERNAME")
+    user = Fore. YELLOW + usr
     os.system("cls")
     print(f"""{Fore.RED}  ▄████  ▄▄▄       ██▓    ▄▄▄      ▒██   ██▒▓██   ██▓     █████▒██▓███    ██████ 
  ██▒ ▀█▒▒████▄    ▓██▒   ▒████▄    ▒▒ █ █ ▒░ ▒██  ██▒   ▓██   ▒▓██░  ██▒▒██    ▒ 
@@ -52,6 +54,7 @@ while True:
       ░       ░  ░    ░  ░     ░  ░ ░    ░   ░ ░                              ░  
                                              ░ ░                                 """)
     print(Fore.YELLOW + "Galaxy FPS v", local, "[ TEMP MENU ]")
+    print(Fore.BLUE + "Logged in as " + user)
     print(Fore.CYAN + "> 1. Tweaks")
     print("> 2. Delete Tweaks")
     print(Fore.GREEN + "> 3. Internet Tweaks")
@@ -111,6 +114,6 @@ while True:
         print("Version: " + local)
         print("Author: RivioxGaming#4176")
         print("Credits: caxzy#3907 for autoupdater from ZTweaks :trollface:")
-        os.system('timeout /t 5 >nul')
+        os.system('pause >NUL')
     else:
         print("Invalid choice. Please try again.")
