@@ -2,6 +2,7 @@ import os
 import requests
 import ctypes
 import sys
+import subprocess
 from colorama import Fore, init
 
 init(autoreset=True)
@@ -23,7 +24,7 @@ if response.status_code == 200:
     with open(temp_version_file, 'wb') as file:
         file.write(response.content)
 
-local = "2.8.3"
+local = "3.0"
 
 def update(local):
     update_url = "https://raw.githubusercontent.com/RivioxGaming/GalaxyFPS/main/GalaxyFPS.py"
@@ -77,7 +78,8 @@ while True:
     print(Fore.CYAN + "> 2. Delete Tweaks")
     print(Fore.CYAN + "> 3. Internet Tweaks")
     print(Fore.CYAN + "> 4. Cleaner")
-    print(Fore.CYAN + "> 5. Info")
+    print(Fore.CYAN + "> 5. Advanced Tweaks")
+    print(Fore.CYAN + "> 6. Info")
     choice = input(Fore.RED + "> " + Fore.WHITE)
 
     if choice == "1":
@@ -87,6 +89,12 @@ while True:
         os.system('Reg.exe add "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management" /v "SystemPages" /t REG_SZ /d "0" /f')
         os.system('Reg.exe add "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management" /v "PoolUsageMaximum" /t REG_SZ /d "00000060" /f')
         os.system('Reg.exe add "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR" /v "AppCaptureEnabled" /t REG_SZ /d "0" /f')
+        os.system('Reg.exe add "HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\kernel" /v "DisableExceptionChainValidation" /t REG_DWORD /d "1" /f')
+        os.system('Reg.exe add "HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\kernel" /v "DpcWatchdogProfileOffset" /t REG_DWORD /d "0" /f')
+        os.system('Reg.exe add "HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\kernel" /v "DpcWatchdogPeriod" /t REG_DWORD /d "0" /f')
+        os.system('Reg.exe add "HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\kernel" /v "KernelSEHOPEnabled" /t REG_DWORD /d "0" /f')
+        os.system('Reg.exe add "HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\kernel" /v "SerializeTimerExpiration" /t REG_DWORD /d "0" /f')
+        os.system('Reg.exe add "HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\kernel" /v "InterruptSteeringDisabled" /t REG_DWORD /d "1" /f')
         os.system('taskkill /f /im explorer.exe')
         os.system('start explorer.exe')
 
@@ -129,6 +137,20 @@ while True:
         os.system('timeout 3 >nul')
 
     elif choice == "5":
+        reg_file_url = "https://raw.githubusercontent.com/RivioxGaming/GalaxyFPS/main/regs/advtweaks.reg"
+        reg_file_name = "%temp%\\advtweaks.reg"
+
+        response = requests.get(reg_file_url)
+        if response.status_code == 200:
+            with open(reg_file_name, 'wb') as reg_file:
+                reg_file.write(response.content)
+
+            if os.path.exists(reg_file_name):
+                subprocess.run(["regedit", "/s", reg_file_name]) 
+        else:
+            print("Failed to download the .reg file")
+
+    elif choice == "6":
         print("Version: " + local)
         print("Author: .riviox")
         os.system('pause >NUL')
