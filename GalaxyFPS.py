@@ -24,23 +24,24 @@ if response.status_code == 200:
     with open(temp_version_file, 'wb') as file:
         file.write(response.content)
 
-local = "2.5"
-if os.path.exists(temp_version_file):
-    with open(temp_version_file, "r") as file:
-        new_version = file.read().strip()
+local = "2.6"
+def check_and_update_version(local):
+    update_url = "https://github.com/RivioxGaming/GalaxyFPS/releases/latest/GalaxyFPS.py"
+    response = requests.get(update_url)
+    
+    if response.status_code == 200:
+        new_version = response.text.strip()
         if local < new_version:
             print(f"Your Version: {local}")
             print(f"New version: {new_version}")
             print("Note: You don't have to install pre-releases.")
             choice = input("Do you want to update? (y/n): ")
             if choice.lower() == 'y':
-                update_url = "https://github.com/RivioxGaming/GalaxyFPS/releases/latest/GalaxyFPS.py"
-                response = requests.get(update_url)
-                if response.status_code == 200:
-                    with open(__file__, 'wb') as file:
-                        file.write(response.content)
-                    subprocess.call([__file__])
-                    exit()
+                with open(__file__, 'wb') as file:
+                    file.write(response.content)
+                subprocess.call([__file__])
+                exit()
+
 
 def prtlogo():
     adj = (" " * 20)
