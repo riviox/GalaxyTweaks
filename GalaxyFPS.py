@@ -23,14 +23,14 @@ if response.status_code == 200:
     with open(temp_version_file, 'wb') as file:
         file.write(response.content)
 
-local = "2.7"
+local = "2.8"
 
 def update(local):
     update_url = "https://raw.githubusercontent.com/RivioxGaming/GalaxyFPS/main/GalaxyFPS.py"
     response = requests.get(update_url)
     
     if response.status_code == 200:
-        new_version = response.text.strip().splitlines()[3].split('=')[1].replace('"', '').strip()
+        new_version = response.text.strip().splitlines()
         if local < new_version:
             print(f"Your Version: {local}")
             print(f"New version: {new_version}")
