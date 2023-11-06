@@ -13,8 +13,8 @@ message = 'Note that you must run GalaxyFPS as an administrator for the changes 
 ctypes.windll.user32.MessageBoxW(0, message, 'GalaxyFPS v2.0', 0x10)
 
 temp_folder = os.environ['TEMP']
-versionurl = "https://raw.githubusercontent.com/RivioxGaming/GalaxyFPS/main/version"
 temp_version_file = os.path.join(temp_folder, "gversion.txt")
+versionurl = "https://raw.githubusercontent.com/RivioxGaming/GalaxyFPS/main/version"
 
 if os.path.exists(temp_version_file):
     os.remove(temp_version_file)
@@ -26,7 +26,7 @@ if response.status_code == 200:
 
 local = "2.6"
 def update(local):
-    update_url = "https://github.com/RivioxGaming/GalaxyFPS/releases/latest/GalaxyFPS.py"
+    update_url = "https://raw.githubusercontent.com/RivioxGaming/GalaxyFPS/main/GalaxyFPS.py"
     response = requests.get(update_url)
     
     if response.status_code == 200:
