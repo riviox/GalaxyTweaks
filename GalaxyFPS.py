@@ -133,4 +133,4 @@ while True:
         print("Author: .riviox")
         os.system('pause >NUL')
     else:
-        print("Invalid choice. Please try again.")
+        print(f"{choice} is Invalid. Please try again.")
