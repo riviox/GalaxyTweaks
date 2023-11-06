@@ -2,17 +2,18 @@ import os
 import requests
 import ctypes
 import subprocess
-import keyboard
-from colorama import Fore, Back, Style, init
+from colorama import Fore, init
 
 init(autoreset=True)
+
+print(Fore.GREEN + "Loading...")
 
 message = 'Note that you must run GalaxyFPS as an administrator for the changes to take effect on your system. Else there will be no changes on your system'
 ctypes.windll.user32.MessageBoxW(0, message, 'GalaxyFPS v2.0', 0x10)
 
 temp_folder = os.environ['TEMP']
-versionurl = "https://raw.githubusercontent.com/RivioxGaming/GalaxyFPS/main/version"
 temp_version_file = os.path.join(temp_folder, "gversion.txt")
+versionurl = "https://raw.githubusercontent.com/RivioxGaming/GalaxyFPS/main/version"
 
 if os.path.exists(temp_version_file):
     os.remove(temp_version_file)
@@ -22,46 +23,62 @@ if response.status_code == 200:
     with open(temp_version_file, 'wb') as file:
         file.write(response.content)
 
-# Otwarcie pliku z nową wersją i aktualizacja, jeśli jest nowa wersja dostępna
-local = "2.0"
-if os.path.exists(temp_version_file):
-    with open(temp_version_file, "r") as file:
-        new_version = file.read().strip()
+local = "2.8.1"
+
+def update(local):
+    update_url = "https://raw.githubusercontent.com/RivioxGaming/GalaxyFPS/main/GalaxyFPS.py"
+    response = requests.get(update_url)
+    
+    if response.status_code == 200:
+        new_version = local
+        script_lines = response.text.splitlines()
+        for line in script_lines:
+            if line.startswith('local ='):
+                new_version = line.split('=')[1].strip().replace('"', '')
+                break
+
         if local < new_version:
             print(f"Your Version: {local}")
             print(f"New version: {new_version}")
             print("Note: You don't have to install pre-releases.")
             choice = input("Do you want to update? (y/n): ")
             if choice.lower() == 'y':
-                update_url = "https://github.com/RivioxGaming/GalaxyFPS/releases/latest/GalaxyFPS.py"
-                response = requests.get(update_url)
-                if response.status_code == 200:
-                    with open(__file__, 'wb') as file:
-                        file.write(response.content)
-                    subprocess.call([__file__])
-                    exit()
+                with open(__file__, 'wb') as file:
+                    file.write(response.content)
+                subprocess.call([__file__])
+                exit()
+
+
+def prtlogo():
+    adj = (" " * 20)
+    logo = f"""{Fore.RED}{adj}  ▄████  ▄▄▄       ██▓    ▄▄▄      ▒██   ██▒▓██   ██▓     █████▒██▓███    ██████ 
+{adj} ██▒ ▀█▒▒████▄    ▓██▒   ▒████▄    ▒▒ █ █ ▒░ ▒██  ██▒   ▓██   ▒▓██░  ██▒▒██    ▒ 
+{adj}▒██░▄▄▄░▒██  ▀█▄  ▒██░   ▒██  ▀█▄  ░░  █   ░  ▒██ ██░   ▒████ ░▓██░ ██▓▒░ ▓██▄   
+{adj}░▓█  ██▓░██▄▄▄▄██ ▒██░   ░██▄▄▄▄██  ░ █ █ ▒   ░ ▐██▓░   ░▓█▒  ░▒██▄█▓▒ ▒  ▒   ██▒
+{adj}░▒▓███▀▒ ▓█   ▓██▒░██████▒▓█   ▓██▒▒██▒ ▒██▒  ░ ██▒▓░   ░▒█░   ▒██▒ ░  ░▒██████▒▒
+{adj} ░▒   ▒  ▒▒   ▓▒█░░ ▒░▓  ░▒▒   ▓▒█░▒▒ ░ ░▓ ░   ██▒▒▒     ▒ ░   ▒▓▒░ ░  ░▒ ▒▓▒ ▒ ░
+{adj}  ░   ░   ▒   ▒▒ ░░ ░ ▒  ░ ▒   ▒▒ ░░░   ░▒ ░ ▓██ ░▒░     ░     ░▒ ░     ░ ░▒  ░ ░
+{adj}░ ░   ░   ░   ▒     ░ ░    ░   ▒    ░    ░   ▒ ▒ ░░      ░ ░   ░░       ░  ░  ░  
+{adj}      ░       ░  ░    ░  ░     ░  ░ ░    ░   ░ ░                              ░  
+{adj}                                             ░ ░                                 """
+    print(logo)
+
 while True:
+    update(local)
+    usr = os.getenv("USERNAME")
+    user = Fore. YELLOW + usr
     os.system("cls")
-    print(f"""{Fore.RED}  ▄████  ▄▄▄       ██▓    ▄▄▄      ▒██   ██▒▓██   ██▓     █████▒██▓███    ██████ 
- ██▒ ▀█▒▒████▄    ▓██▒   ▒████▄    ▒▒ █ █ ▒░ ▒██  ██▒   ▓██   ▒▓██░  ██▒▒██    ▒ 
-▒██░▄▄▄░▒██  ▀█▄  ▒██░   ▒██  ▀█▄  ░░  █   ░  ▒██ ██░   ▒████ ░▓██░ ██▓▒░ ▓██▄   
-░▓█  ██▓░██▄▄▄▄██ ▒██░   ░██▄▄▄▄██  ░ █ █ ▒   ░ ▐██▓░   ░▓█▒  ░▒██▄█▓▒ ▒  ▒   ██▒
-░▒▓███▀▒ ▓█   ▓██▒░██████▒▓█   ▓██▒▒██▒ ▒██▒  ░ ██▒▓░   ░▒█░   ▒██▒ ░  ░▒██████▒▒
- ░▒   ▒  ▒▒   ▓▒█░░ ▒░▓  ░▒▒   ▓▒█░▒▒ ░ ░▓ ░   ██▒▒▒     ▒ ░   ▒▓▒░ ░  ░▒ ▒▓▒ ▒ ░
-  ░   ░   ▒   ▒▒ ░░ ░ ▒  ░ ▒   ▒▒ ░░░   ░▒ ░ ▓██ ░▒░     ░     ░▒ ░     ░ ░▒  ░ ░
-░ ░   ░   ░   ▒     ░ ░    ░   ▒    ░    ░   ▒ ▒ ░░      ░ ░   ░░       ░  ░  ░  
-      ░       ░  ░    ░  ░     ░  ░ ░    ░   ░ ░                              ░  
-                                             ░ ░                                 """)
+    prtlogo()
     print(Fore.YELLOW + "Galaxy FPS v", local, "[ TEMP MENU ]")
+    print(Fore.BLUE + "Logged in as " + user)
     print(Fore.CYAN + "> 1. Tweaks")
-    print("> 2. Delete Tweaks")
-    print(Fore.GREEN + "> 3. Internet Tweaks")
-    print(Fore.RED + "> 4. Cleaner")
-    print(Fore.MAGENTA + "> 5. Info")
-    choice = input(Fore.WHITE + ">>> ")
+    print(Fore.CYAN + "> 2. Delete Tweaks")
+    print(Fore.CYAN + "> 3. Internet Tweaks")
+    print(Fore.CYAN + "> 4. Cleaner")
+    print(Fore.CYAN + "> 5. Info")
+    choice = input(Fore.RED + "> " + Fore.WHITE)
 
     if choice == "1":
-        os.system('Reg.exe add "HKCU\Control Panel\Desktop" /v "MenuShowDelay" /t REG_SZ /d "0" /f')
         os.system('Reg.exe add "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management" /v "SystemPages" /t REG_SZ /d "0" /f')
         os.system('Reg.exe add "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management" /v "FeatureSettings" /t REG_SZ /d "0" /f')
         os.system('Reg.exe add "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management" /v "FeatureSettingsOverrideMask" /t REG_SZ /d "3" /f')
@@ -110,10 +127,8 @@ while True:
         os.system('timeout 3 >nul')
 
     elif choice == "5":
-        # Informacje
         print("Version: " + local)
-        print("Author: RivioxGaming#4176")
-        print("Credits: caxzy#3907 for autoupdater from ZTweaks :trollface:")
-        os.system('timeout /t 5 >nul')
+        print("Author: .riviox")
+        os.system('pause >NUL')
     else:
         print("Invalid choice. Please try again.")

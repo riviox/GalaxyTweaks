@@ -1,7 +1,7 @@
 import os
 import requests
 import ctypes
-import subprocess
+import sys
 from colorama import Fore, init
 
 init(autoreset=True)
@@ -23,7 +23,7 @@ if response.status_code == 200:
     with open(temp_version_file, 'wb') as file:
         file.write(response.content)
 
-local = "2.8.1"
+local = "2.8.2"
 
 def update(local):
     update_url = "https://raw.githubusercontent.com/RivioxGaming/GalaxyFPS/main/GalaxyFPS.py"
@@ -45,7 +45,9 @@ def update(local):
             if choice.lower() == 'y':
                 with open(__file__, 'wb') as file:
                     file.write(response.content)
-                subprocess.call([__file__])
+                
+                python = sys.executable
+                os.execl(python, python, *sys.argv)
                 exit()
 
 
