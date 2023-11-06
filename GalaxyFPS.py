@@ -10,7 +10,7 @@ init(autoreset=True)
 print(Fore.GREEN + "Loading...")
 
 message = 'Note that you must run GalaxyFPS as an administrator for the changes to take effect on your system. Else there will be no changes on your system'
-ctypes.windll.user32.MessageBoxW(0, message, 'GalaxyFPS v2.0', 0x10)
+ctypes.windll.user32.MessageBoxW(0, message, 'GalaxyFPS', 0x10)
 
 temp_folder = os.environ['TEMP']
 temp_version_file = os.path.join(temp_folder, "gversion.txt")
@@ -24,7 +24,7 @@ if response.status_code == 200:
     with open(temp_version_file, 'wb') as file:
         file.write(response.content)
 
-local = "3.0"
+local = "3.1"
 
 def update(local):
     update_url = "https://raw.githubusercontent.com/RivioxGaming/GalaxyFPS/main/GalaxyFPS.py"
@@ -54,7 +54,9 @@ def update(local):
 
 def prtlogo():
     adj = (" " * 20)
-    logo = f"""{Fore.RED}{adj}  ▄████  ▄▄▄       ██▓    ▄▄▄      ▒██   ██▒▓██   ██▓     █████▒██▓███    ██████ 
+    logo = f"""{Fore.RED}
+
+{adj}  ▄████  ▄▄▄       ██▓    ▄▄▄      ▒██   ██▒▓██   ██▓     █████▒██▓███    ██████ 
 {adj} ██▒ ▀█▒▒████▄    ▓██▒   ▒████▄    ▒▒ █ █ ▒░ ▒██  ██▒   ▓██   ▒▓██░  ██▒▒██    ▒ 
 {adj}▒██░▄▄▄░▒██  ▀█▄  ▒██░   ▒██  ▀█▄  ░░  █   ░  ▒██ ██░   ▒████ ░▓██░ ██▓▒░ ▓██▄   
 {adj}░▓█  ██▓░██▄▄▄▄██ ▒██░   ░██▄▄▄▄██  ░ █ █ ▒   ░ ▐██▓░   ░▓█▒  ░▒██▄█▓▒ ▒  ▒   ██▒
