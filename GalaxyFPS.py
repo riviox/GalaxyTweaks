@@ -25,7 +25,7 @@ if response.status_code == 200:
         file.write(response.content)
 
 local = "2.6"
-def check_and_update_version(local):
+def update(local):
     update_url = "https://github.com/RivioxGaming/GalaxyFPS/releases/latest/GalaxyFPS.py"
     response = requests.get(update_url)
     
@@ -58,6 +58,7 @@ def prtlogo():
     print(logo)
 
 while True:
+    update(local)
     usr = os.getenv("USERNAME")
     user = Fore. YELLOW + usr
     os.system("cls")
