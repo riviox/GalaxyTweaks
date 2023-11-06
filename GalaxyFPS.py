@@ -2,7 +2,6 @@ import os
 import requests
 import ctypes
 import subprocess
-import keyboard
 from colorama import Fore, Back, Style, init
 
 init(autoreset=True)
