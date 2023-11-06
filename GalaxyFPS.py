@@ -7,6 +7,8 @@ from colorama import Fore, Back, Style, init
 
 init(autoreset=True)
 
+print(Fore.GREEN + "Loading...")
+
 message = 'Note that you must run GalaxyFPS as an administrator for the changes to take effect on your system. Else there will be no changes on your system'
 ctypes.windll.user32.MessageBoxW(0, message, 'GalaxyFPS v2.0', 0x10)
 
@@ -22,7 +24,7 @@ if response.status_code == 200:
     with open(temp_version_file, 'wb') as file:
         file.write(response.content)
 
-local = "2.1"
+local = "2.5"
 if os.path.exists(temp_version_file):
     with open(temp_version_file, "r") as file:
         new_version = file.read().strip()
@@ -39,28 +41,34 @@ if os.path.exists(temp_version_file):
                         file.write(response.content)
                     subprocess.call([__file__])
                     exit()
+
+def prtlogo():
+    adj = (" " * 20)
+    logo = f"""{Fore.RED}{adj}  ▄████  ▄▄▄       ██▓    ▄▄▄      ▒██   ██▒▓██   ██▓     █████▒██▓███    ██████ 
+{adj} ██▒ ▀█▒▒████▄    ▓██▒   ▒████▄    ▒▒ █ █ ▒░ ▒██  ██▒   ▓██   ▒▓██░  ██▒▒██    ▒ 
+{adj}▒██░▄▄▄░▒██  ▀█▄  ▒██░   ▒██  ▀█▄  ░░  █   ░  ▒██ ██░   ▒████ ░▓██░ ██▓▒░ ▓██▄   
+{adj}░▓█  ██▓░██▄▄▄▄██ ▒██░   ░██▄▄▄▄██  ░ █ █ ▒   ░ ▐██▓░   ░▓█▒  ░▒██▄█▓▒ ▒  ▒   ██▒
+{adj}░▒▓███▀▒ ▓█   ▓██▒░██████▒▓█   ▓██▒▒██▒ ▒██▒  ░ ██▒▓░   ░▒█░   ▒██▒ ░  ░▒██████▒▒
+{adj} ░▒   ▒  ▒▒   ▓▒█░░ ▒░▓  ░▒▒   ▓▒█░▒▒ ░ ░▓ ░   ██▒▒▒     ▒ ░   ▒▓▒░ ░  ░▒ ▒▓▒ ▒ ░
+{adj}  ░   ░   ▒   ▒▒ ░░ ░ ▒  ░ ▒   ▒▒ ░░░   ░▒ ░ ▓██ ░▒░     ░     ░▒ ░     ░ ░▒  ░ ░
+{adj}░ ░   ░   ░   ▒     ░ ░    ░   ▒    ░    ░   ▒ ▒ ░░      ░ ░   ░░       ░  ░  ░  
+{adj}      ░       ░  ░    ░  ░     ░  ░ ░    ░   ░ ░                              ░  
+{adj}                                             ░ ░                                 """
+    print(logo)
+
 while True:
     usr = os.getenv("USERNAME")
     user = Fore. YELLOW + usr
     os.system("cls")
-    print(f"""{Fore.RED}  ▄████  ▄▄▄       ██▓    ▄▄▄      ▒██   ██▒▓██   ██▓     █████▒██▓███    ██████ 
- ██▒ ▀█▒▒████▄    ▓██▒   ▒████▄    ▒▒ █ █ ▒░ ▒██  ██▒   ▓██   ▒▓██░  ██▒▒██    ▒ 
-▒██░▄▄▄░▒██  ▀█▄  ▒██░   ▒██  ▀█▄  ░░  █   ░  ▒██ ██░   ▒████ ░▓██░ ██▓▒░ ▓██▄   
-░▓█  ██▓░██▄▄▄▄██ ▒██░   ░██▄▄▄▄██  ░ █ █ ▒   ░ ▐██▓░   ░▓█▒  ░▒██▄█▓▒ ▒  ▒   ██▒
-░▒▓███▀▒ ▓█   ▓██▒░██████▒▓█   ▓██▒▒██▒ ▒██▒  ░ ██▒▓░   ░▒█░   ▒██▒ ░  ░▒██████▒▒
- ░▒   ▒  ▒▒   ▓▒█░░ ▒░▓  ░▒▒   ▓▒█░▒▒ ░ ░▓ ░   ██▒▒▒     ▒ ░   ▒▓▒░ ░  ░▒ ▒▓▒ ▒ ░
-  ░   ░   ▒   ▒▒ ░░ ░ ▒  ░ ▒   ▒▒ ░░░   ░▒ ░ ▓██ ░▒░     ░     ░▒ ░     ░ ░▒  ░ ░
-░ ░   ░   ░   ▒     ░ ░    ░   ▒    ░    ░   ▒ ▒ ░░      ░ ░   ░░       ░  ░  ░  
-      ░       ░  ░    ░  ░     ░  ░ ░    ░   ░ ░                              ░  
-                                             ░ ░                                 """)
+    prtlogo()
     print(Fore.YELLOW + "Galaxy FPS v", local, "[ TEMP MENU ]")
     print(Fore.BLUE + "Logged in as " + user)
     print(Fore.CYAN + "> 1. Tweaks")
-    print("> 2. Delete Tweaks")
-    print(Fore.GREEN + "> 3. Internet Tweaks")
-    print(Fore.RED + "> 4. Cleaner")
-    print(Fore.MAGENTA + "> 5. Info")
-    choice = input(Fore.WHITE + ">>> ")
+    print(Fore.CYAN + "> 2. Delete Tweaks")
+    print(Fore.CYAN + "> 3. Internet Tweaks")
+    print(Fore.CYAN + "> 4. Cleaner")
+    print(Fore.CYAN + "> 5. Info")
+    choice = input(Fore.RED + "> " + Fore.WHITE)
 
     if choice == "1":
         os.system('Reg.exe add "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management" /v "SystemPages" /t REG_SZ /d "0" /f')
@@ -112,8 +120,7 @@ while True:
 
     elif choice == "5":
         print("Version: " + local)
-        print("Author: RivioxGaming#4176")
-        print("Credits: caxzy#3907 for autoupdater from ZTweaks :trollface:")
+        print("Author: .riviox")
         os.system('pause >NUL')
     else:
         print("Invalid choice. Please try again.")
