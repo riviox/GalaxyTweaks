@@ -24,7 +24,7 @@ if response.status_code == 200:
     with open(temp_version_file, 'wb') as file:
         file.write(response.content)
 
-local = "3.1"
+local = "3.2"
 
 def update(local):
     update_url = "https://raw.githubusercontent.com/RivioxGaming/GalaxyFPS/main/GalaxyFPS.py"
@@ -82,6 +82,7 @@ while True:
     print(Fore.CYAN + "> 4. Cleaner")
     print(Fore.CYAN + "> 5. Advanced Tweaks")
     print(Fore.CYAN + "> 6. Info")
+    print(Fore.CYAN + "> 7. Registry backup [ RECOMMENDED ]")
     choice = input(Fore.RED + "> " + Fore.WHITE)
 
     if choice == "1":
@@ -156,5 +157,8 @@ while True:
         print("Version: " + local)
         print("Author: .riviox")
         os.system('pause >NUL')
+
+    elif choice == "7":
+        os.system('regedit.exe /e "C:\RegistryBackup.reg"')
     else:
-        print(f"{choice} is Invalid. Please try again.")
+        print(f' [ {choice} ] is Invalid. Please try again.')
