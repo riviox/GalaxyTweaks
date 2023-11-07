@@ -38,7 +38,7 @@ def update(local):
                 new_version = line.split('=')[1].strip().replace('"', '')
                 break
 
-        if local < new_version:
+        if local != new_version:
             print(f"Your Version: {local}")
             print(f"New version: {new_version}")
             print("Note: You don't have to install pre-releases.")
