@@ -24,7 +24,7 @@ if response.status_code == 200:
     with open(temp_version_file, 'wb') as file:
         file.write(response.content)
 
-local = "3.4"
+local = "3.4.5"
 
 def update(local):
     update_url = "https://raw.githubusercontent.com/RivioxGaming/GalaxyFPS/main/GalaxyFPS.py"
@@ -75,14 +75,14 @@ while True:
     os.system("cls")
     prtlogo()
     print(f"""
-                    {Fore.BLUE}[ 1 {Fore.BLUE}] Main Tweaks
-                    {Fore.BLUE}[ 2 {Fore.BLUE}] Delete Tweaks
-                    {Fore.BLUE}[ 3 {Fore.BLUE}] Internet Tweaks
-                    {Fore.BLUE}[ 4 {Fore.BLUE}] Cleaner
-                    {Fore.BLUE}[ 5 {Fore.BLUE}] Advanced Tweaks
-                    {Fore.BLUE}[ 6 {Fore.BLUE}] Info
-                    {Fore.BLUE}[ 7 {Fore.BLUE}] Registry backup [ RECOMMENDED ]
-                    {Fore.BLUE}[ ? {Fore.BLUE}] > 
+                    {Fore.BLUE}[ {Fore.GREEN}1 {Fore.BLUE}] {Fore.GREEN}Main Tweaks
+                    {Fore.BLUE}[ {Fore.GREEN}2 {Fore.BLUE}] {Fore.GREEN}Delete Tweaks
+                    {Fore.BLUE}[ {Fore.GREEN}3 {Fore.BLUE}] {Fore.GREEN}Internet Tweaks
+                    {Fore.BLUE}[ {Fore.GREEN}4 {Fore.BLUE}] {Fore.GREEN}Cleaner
+                    {Fore.BLUE}[ {Fore.GREEN}5 {Fore.BLUE}] {Fore.GREEN}Advanced Tweaks
+                    {Fore.BLUE}[ {Fore.GREEN}6 {Fore.BLUE}] {Fore.GREEN} Info
+                    {Fore.BLUE}[ {Fore.GREEN}7 {Fore.BLUE}] {Fore.GREEN}Registry backup [ RECOMMENDED ]
+                    {Fore.BLUE}[ {Fore.GREEN}? {Fore.BLUE}] {Fore.GREEN}> 
     """)
     choice = input(Fore.RED + "> " + Fore.WHITE)
 
