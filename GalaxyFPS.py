@@ -74,15 +74,16 @@ while True:
     user = Fore. YELLOW + usr
     os.system("cls")
     prtlogo()
-    print(Fore.YELLOW + "Galaxy FPS v", local, "[ TEMP MENU ]")
-    print(Fore.BLUE + "Logged in as " + user)
-    print(Fore.CYAN + "> 1. Tweaks")
-    print(Fore.CYAN + "> 2. Delete Tweaks")
-    print(Fore.CYAN + "> 3. Internet Tweaks")
-    print(Fore.CYAN + "> 4. Cleaner")
-    print(Fore.CYAN + "> 5. Advanced Tweaks")
-    print(Fore.CYAN + "> 6. Info")
-    print(Fore.CYAN + "> 7. Registry backup [ RECOMMENDED ]")
+    print(f"""
+                    {Fore.BLUE}[ 1 {Fore.BLUE}] Main Tweaks
+                    {Fore.BLUE}[ 2 {Fore.BLUE}] Delete Tweaks
+                    {Fore.BLUE}[ 3 {Fore.BLUE}] Internet Tweaks
+                    {Fore.BLUE}[ 4 {Fore.BLUE}] Cleaner
+                    {Fore.BLUE}[ 5 {Fore.BLUE}] Advanced Tweaks
+                    {Fore.BLUE}[ 6 {Fore.BLUE}] Info
+                    {Fore.BLUE}[ 7 {Fore.BLUE}] Registry backup [ RECOMMENDED ]
+                    {Fore.BLUE}[ ? {Fore.BLUE}] > 
+    """)
     choice = input(Fore.RED + "> " + Fore.WHITE)
 
     if choice == "1":
@@ -154,6 +155,14 @@ while True:
             print("Failed to download the .reg file")
 
     elif choice == "6":
+        print("""
+            Made by
+         _       _           
+    _ __(_)_   _(_) _____  __
+   | '__| \ \ / / |/ _ \ \/ /
+ _ | |  | |\ V /| | (_) >  < 
+|_||_|  |_| \_/ |_|\___/_/\_\\
+              """)
         print("Version: " + local)
         print("Author: .riviox")
         os.system('pause >NUL')
