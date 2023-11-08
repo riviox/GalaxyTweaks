@@ -305,6 +305,6 @@ Reg.exe add "HKCU\Control Panel\PowerCfg\GlobalPowerPolicy" /v "Policies" /t REG
         os.system('pause >NUL')
 
     elif choice == "7":
-        os.system('regedit.exe /e "C:\RegistryBackup.reg"')
+        os.system('regedit.exe /e "C:\GalaxyFPSregbckp.reg"')
     else:
         print(f' [ {choice} ] is Invalid. Please try again.')
