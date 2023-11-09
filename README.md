@@ -14,4 +14,4 @@ pip install -r requirements.txt
 ![image](/imgs/ui.png)
 
 ## To Do
-- [ ] Autoinstaller
+- [x] Autoinstaller
