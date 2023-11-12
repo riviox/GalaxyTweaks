@@ -1,3 +1,5 @@
+![GitHub](https://img.shields.io/github/license/RivioxGaming/GalaxyFPS) ![GitHub repo size](https://img.shields.io/github/repo-size/RivioxGaming/GalaxyFPS)
+
 # GalaxyFPS
 ## FPS Tweaker for Windows OS written in Python
 ### How to use

@@ -9,8 +9,19 @@ init(autoreset=True)
 
 print(Fore.GREEN + "Loading...")
 
-message = 'Note that you must run GalaxyFPS as an administrator for the changes to take effect on your system. Else there will be no changes on your system'
-ctypes.windll.user32.MessageBoxW(0, message, 'GalaxyFPS', 0x10)
+def run_as_admin():
+    try:
+        if ctypes.windll.shell32.IsUserAnAdmin():
+            return
+
+        script = os.path.abspath(sys.argv[0])
+        params = ' '.join(sys.argv[1:])
+        subprocess.run(['powershell', f'Start-Process -Verb RunAs "{sys.executable}" -ArgumentList "{script} {params}"'])
+        sys.exit()
+    except Exception as e:
+        print(f"Error: {e}")
+        sys.exit()
+run_as_admin()
 
 temp_folder = os.environ['TEMP']
 temp_version_file = os.path.join(temp_folder, "gversion.txt")
@@ -24,7 +35,8 @@ if response.status_code == 200:
     with open(temp_version_file, 'wb') as file:
         file.write(response.content)
 
-local = "3.4.6"
+local = "3.5"
+
 
 def update(local):
     update_url = "https://raw.githubusercontent.com/RivioxGaming/GalaxyFPS/main/GalaxyFPS.py"
