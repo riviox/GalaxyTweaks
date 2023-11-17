@@ -35,11 +35,11 @@ if response.status_code == 200:
     with open(temp_version_file, 'wb') as file:
         file.write(response.content)
 
-local = "3.5"
+local = "3.6"
 
 
 def update(local):
-    update_url = "https://raw.githubusercontent.com/RivioxGaming/GalaxyFPS/main/GalaxyFPS.py"
+    update_url = "https://raw.githubusercontent.com/RivioxGaming/GalaxyFPS/main/GalaxyTweaks.py"
     response = requests.get(update_url)
     
     if response.status_code == 200:
@@ -63,39 +63,39 @@ def update(local):
                 os.execl(python, python, *sys.argv)
                 exit()
 
-
+adj = (" " * 10)
 def prtlogo():
-    adj = (" " * 20)
     logo = f"""{Fore.RED}
-
-{adj}  ▄████  ▄▄▄       ██▓    ▄▄▄      ▒██   ██▒▓██   ██▓     █████▒██▓███    ██████ 
-{adj} ██▒ ▀█▒▒████▄    ▓██▒   ▒████▄    ▒▒ █ █ ▒░ ▒██  ██▒   ▓██   ▒▓██░  ██▒▒██    ▒ 
-{adj}▒██░▄▄▄░▒██  ▀█▄  ▒██░   ▒██  ▀█▄  ░░  █   ░  ▒██ ██░   ▒████ ░▓██░ ██▓▒░ ▓██▄   
-{adj}░▓█  ██▓░██▄▄▄▄██ ▒██░   ░██▄▄▄▄██  ░ █ █ ▒   ░ ▐██▓░   ░▓█▒  ░▒██▄█▓▒ ▒  ▒   ██▒
-{adj}░▒▓███▀▒ ▓█   ▓██▒░██████▒▓█   ▓██▒▒██▒ ▒██▒  ░ ██▒▓░   ░▒█░   ▒██▒ ░  ░▒██████▒▒
-{adj} ░▒   ▒  ▒▒   ▓▒█░░ ▒░▓  ░▒▒   ▓▒█░▒▒ ░ ░▓ ░   ██▒▒▒     ▒ ░   ▒▓▒░ ░  ░▒ ▒▓▒ ▒ ░
-{adj}  ░   ░   ▒   ▒▒ ░░ ░ ▒  ░ ▒   ▒▒ ░░░   ░▒ ░ ▓██ ░▒░     ░     ░▒ ░     ░ ░▒  ░ ░
-{adj}░ ░   ░   ░   ▒     ░ ░    ░   ▒    ░    ░   ▒ ▒ ░░      ░ ░   ░░       ░  ░  ░  
-{adj}      ░       ░  ░    ░  ░     ░  ░ ░    ░   ░ ░                              ░  
-{adj}                                             ░ ░      {Fore.GREEN} Version: {local}                          """
+{adj}
+{adj}  ▄████  ▄▄▄       ██▓    ▄▄▄      ▒██   ██▒▓██   ██▓▄▄▄█████▓ █     █░▓█████ ▄▄▄       ██ ▄█▀  ██████ 
+{adj} ██▒ ▀█▒▒████▄    ▓██▒   ▒████▄    ▒▒ █ █ ▒░ ▒██  ██▒▓  ██▒ ▓▒▓█░ █ ░█░▓█   ▀▒████▄     ██▄█▒ ▒██    ▒ 
+{adj}▒██░▄▄▄░▒██  ▀█▄  ▒██░   ▒██  ▀█▄  ░░  █   ░  ▒██ ██░▒ ▓██░ ▒░▒█░ █ ░█ ▒███  ▒██  ▀█▄  ▓███▄░ ░ ▓██▄   
+{adj}░▓█  ██▓░██▄▄▄▄██ ▒██░   ░██▄▄▄▄██  ░ █ █ ▒   ░ ▐██▓░░ ▓██▓ ░ ░█░ █ ░█ ▒▓█  ▄░██▄▄▄▄██ ▓██ █▄   ▒   ██▒
+{adj}░▒▓███▀▒ ▓█   ▓██▒░██████▒▓█   ▓██▒▒██▒ ▒██▒  ░ ██▒▓░  ▒██▒ ░ ░░██▒██▓ ░▒████▒▓█   ▓██▒▒██▒ █▄▒██████▒▒
+{adj}░▒   ▒  ▒▒   ▓▒█░░ ▒░▓  ░▒▒   ▓▒█░▒▒ ░ ░▓ ░   ██▒▒▒   ▒ ░░   ░ ▓░▒ ▒  ░░ ▒░ ░▒▒   ▓▒█░▒ ▒▒ ▓▒▒ ▒▓▒ ▒ ░
+{adj}  ░   ░   ▒   ▒▒ ░░ ░ ▒  ░ ▒   ▒▒ ░░░   ░▒ ░ ▓██ ░▒░     ░      ▒ ░ ░   ░ ░  ░ ▒   ▒▒ ░░ ░▒ ▒░░ ░▒  ░ ░
+{adj}░ ░   ░   ░   ▒     ░ ░    ░   ▒    ░    ░   ▒ ▒ ░░    ░        ░   ░     ░    ░   ▒   ░ ░░ ░ ░  ░  ░  
+{adj}      ░       ░  ░    ░  ░     ░  ░ ░    ░   ░ ░                  ░       ░  ░     ░  ░░  ░         ░  
+{adj}                                             ░ ░                   {Fore.GREEN} Version: {local}                               
+                          """
     print(logo)
 
 while True:
+    os.system("title GalaxyTweaks")
     update(local)
     usr = os.getenv("USERNAME")
     user = Fore. YELLOW + usr
     os.system("cls")
     prtlogo()
     print(f"""
-                    {Fore.BLUE}[ {Fore.GREEN}1 {Fore.BLUE}] {Fore.GREEN}Main Tweaks
-                    {Fore.BLUE}[ {Fore.GREEN}2 {Fore.BLUE}] {Fore.GREEN}Delete Tweaks
-                    {Fore.BLUE}[ {Fore.GREEN}3 {Fore.BLUE}] {Fore.GREEN}Internet Tweaks
-                    {Fore.BLUE}[ {Fore.GREEN}4 {Fore.BLUE}] {Fore.GREEN}Cleaner
-                    {Fore.BLUE}[ {Fore.GREEN}5 {Fore.BLUE}] {Fore.GREEN}Advanced Tweaks
-                    {Fore.BLUE}[ {Fore.GREEN}6 {Fore.BLUE}] {Fore.GREEN}Info
-                    {Fore.BLUE}[ {Fore.GREEN}7 {Fore.BLUE}] {Fore.GREEN}Registry backup [ RECOMMENDED ]
-    """)
-    choice = input(f"                    {Fore.BLUE}[ {Fore.GREEN}? {Fore.BLUE}] {Fore.GREEN}> {Fore.YELLOW}")
+{adj}{Fore.BLUE}[ {Fore.GREEN}1 {Fore.BLUE}] {Fore.GREEN}Main Tweaks
+{adj}{Fore.BLUE}[ {Fore.GREEN}2 {Fore.BLUE}] {Fore.GREEN}Delete Tweaks
+{adj}{Fore.BLUE}[ {Fore.GREEN}3 {Fore.BLUE}] {Fore.GREEN}Internet Tweaks
+{adj}{Fore.BLUE}[ {Fore.GREEN}4 {Fore.BLUE}] {Fore.GREEN}Cleaner
+{adj}{Fore.BLUE}[ {Fore.GREEN}5 {Fore.BLUE}] {Fore.GREEN}Advanced Tweaks
+{adj}{Fore.BLUE}[ {Fore.GREEN}6 {Fore.BLUE}] {Fore.GREEN}Info
+{adj}{Fore.BLUE}[ {Fore.GREEN}7 {Fore.BLUE}] {Fore.GREEN}Registry backup [ RECOMMENDED ] """)
+    choice = input(f"{adj}{Fore.BLUE}[ {Fore.GREEN}? {Fore.BLUE}] {Fore.GREEN}> {Fore.YELLOW}")
 
     if choice == "1":
         os.system('Reg.exe add "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management" /v "SystemPages" /t REG_SZ /d "0" /f')
