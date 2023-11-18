@@ -12,5 +12,17 @@ pip install requests colorama
 ```
 - Doubleclick on `GalaxyFPS.py`
 #### You can move `GalaxyFPS.py` to desktop or somewhere else
+### How to compile
+- Install pyinstaller
+```
+pip install pyinstaller
+```
+- Navigate to folder where GalaxyFPS.py is
+- Open command prompt
+- run
+```
+pyinstaller --one-file GalaxyFPS.py
+```
+#### .exe file will be in dist folder!
 ## If you found any bug send it [here](https://discord.gg/XuhVNtyBYM)!
 ![image](/imgs/ui.png)
