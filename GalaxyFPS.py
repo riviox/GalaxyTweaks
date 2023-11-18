@@ -6,6 +6,7 @@ import subprocess
 from colorama import Fore, init
 
 init(autoreset=True)
+local = "3.6.1"
 
 print(Fore.GREEN + "Loading...")
 
@@ -35,7 +36,6 @@ if response.status_code == 200:
     with open(temp_version_file, 'wb') as file:
         file.write(response.content)
 
-local = "3.6"
 
 
 def update(local):
@@ -239,15 +239,6 @@ Reg.exe add "HKCU\Control Panel\PowerCfg\GlobalPowerPolicy" /v "Policies" /t REG
         os.system('Reg.exe add "HKCU\Control Panel\Desktop" /v "LowLevelHooksTimeout" /t REG_SZ /d "1000" /f')
         os.system('Reg.exe add "HKCU\Control Panel\Desktop" /v "MenuShowDelay" /t REG_SZ /d "0" /f')
         os.system('Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control" /v "WaitToKillServiceTimeout" /t REG_SZ /d "2000" /f')
-        os.system('')
-        os.system('')
-        os.system('')
-        os.system('')
-        os.system('')
-        os.system('')
-        os.system('')
-        os.system('')
-        os.system('')
         os.system('taskkill /f /im explorer.exe')
         os.system('start explorer.exe')
 
@@ -313,7 +304,7 @@ Reg.exe add "HKCU\Control Panel\PowerCfg\GlobalPowerPolicy" /v "Policies" /t REG
 |_||_|  |_| \_/ |_|\___/_/\_\\
               """)
         print("Version: " + local)
-        print("Author: .riviox")
+        print("https://discord.gg/zZyfZnNh")
         os.system('pause >NUL')
 
     elif choice == "7":
