@@ -6,7 +6,9 @@ import subprocess
 from colorama import Fore, init
 
 init(autoreset=True)
-local = "3.6.3"
+local = "3.6.4"
+
+# FUCK KOTLIN COMPOSE MULTIPLATFORM
 
 print(Fore.GREEN + "Loading...")
 

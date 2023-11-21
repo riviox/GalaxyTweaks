@@ -88,14 +88,11 @@ while True:
     os.system("cls")
     prtlogo()
     print(f"""
-{adj}{Fore.BLUE}[ {Fore.GREEN}1 {Fore.BLUE}] {Fore.GREEN}Main Tweaks
-{adj}{Fore.BLUE}[ {Fore.GREEN}2 {Fore.BLUE}] {Fore.GREEN}Delete Tweaks
-{adj}{Fore.BLUE}[ {Fore.GREEN}3 {Fore.BLUE}] {Fore.GREEN}Internet Tweaks
-{adj}{Fore.BLUE}[ {Fore.GREEN}4 {Fore.BLUE}] {Fore.GREEN}Cleaner
-{adj}{Fore.BLUE}[ {Fore.GREEN}5 {Fore.BLUE}] {Fore.GREEN}Advanced Tweaks
-{adj}{Fore.BLUE}[ {Fore.GREEN}6 {Fore.BLUE}] {Fore.GREEN}Info
-{adj}{Fore.BLUE}[ {Fore.GREEN}7 {Fore.BLUE}] {Fore.GREEN}Registry backup [ RECOMMENDED ]
-{adj}{Fore.BLUE}[ {Fore.GREEN}8 {Fore.BLUE}] {Fore.GREEN}DWM Tweaks
+{adj}{Fore.BLUE}[ {Fore.GREEN}1 {Fore.BLUE}] {Fore.MAGENTA}Main Tweaks     {Fore.BLUE}[ {Fore.GREEN}2 {Fore.BLUE}] {Fore.MAGENTA}Delete Tweaks    {Fore.BLUE}[ {Fore.GREEN}3 {Fore.BLUE}] {Fore.MAGENTA}Internet Tweaks
+
+{adj}{Fore.BLUE}[ {Fore.GREEN}4 {Fore.BLUE}] {Fore.MAGENTA}Cleaner         {Fore.BLUE}[ {Fore.GREEN}5 {Fore.BLUE}] {Fore.MAGENTA}Advanced Tweaks  {Fore.BLUE}[ {Fore.GREEN}6 {Fore.BLUE}] {Fore.MAGENTA}Info
+
+{adj}{Fore.BLUE}[ {Fore.GREEN}7 {Fore.BLUE}] {Fore.MAGENTA}Registry backup {Fore.BLUE}[ {Fore.GREEN}8 {Fore.BLUE}] {Fore.MAGENTA}DWM Tweaks
 """)
     choice = input(f"{adj}{Fore.BLUE}[ {Fore.GREEN}? {Fore.BLUE}] {Fore.GREEN}> {Fore.YELLOW}")
 
