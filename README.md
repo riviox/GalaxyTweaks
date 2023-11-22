@@ -8,14 +8,14 @@
 - Navigate to folder where GalaxyFPS.py is
 - Open command prompt and run 
 ```
-pip install requests colorama
+pip install requests colorama prettytable
 ```
 - Doubleclick on `GalaxyFPS.py`
 #### You can move `GalaxyFPS.py` to desktop or somewhere else
 ### How to compile
 - Install pyinstaller
 ```
-pip install pyinstaller
+pip install pyinstaller 
 ```
 - Navigate to folder where GalaxyFPS.py is
 - Open command prompt
