@@ -8,8 +8,6 @@ from colorama import Fore, init
 init(autoreset=True)
 local = "3.6.4"
 
-# FUCK KOTLIN COMPOSE MULTIPLATFORM
-
 print(Fore.GREEN + "Loading...")
 
 def run_as_admin():
@@ -96,13 +94,13 @@ while True:
         ("Cleaner", "4"),
         ("Advanced Tweaks", "5"),
         ("Info", "6"),
-        ("Registry backup [RECOMMENDED]", "7"),
+        ("Registry backup [RUN ON FIRST USE]", "7"),
         ("DWM Tweaks", "8"),
         ("Exit", "0")
     ]
     for description, option in options:
         print(f"{adj}{Fore.BLUE}[ {Fore.GREEN}{option} {Fore.BLUE}] {Fore.GREEN}{description}")
-    choice = input(f"{adj}{Fore.BLUE}[ {Fore.GREEN}? {Fore.BLUE}] {Fore.GREEN}> {Fore.YELLOW}")
+    choice = input(f"{adj}{Fore.BLUE}[ {Fore.GREEN}/ {Fore.BLUE}] {Fore.GREEN}> {Fore.YELLOW}")
 
     if choice == "1":
         os.system(r'''
@@ -247,7 +245,7 @@ while True:
         start explorer.exe
 ''')
     elif choice == "2":
-        print("MAYBE IN NEXT UPDATE :O")
+        print("Just run C:\\GalaxyTweaksregbckp.reg to revert tweaks")
 
     elif choice == "3":
         os.system('ipconfig /flushdns')
