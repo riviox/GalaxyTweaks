@@ -21,7 +21,7 @@ pip install pyinstaller
 - Open command prompt
 - run
 ```
-pyinstaller --one-file GalaxyFPS.py
+pyinstaller --onefile GalaxyFPS.py
 ```
 #### .exe file will be in dist folder!
 ## If you found any bug send it [here](https://discord.gg/XuhVNtyBYM)!
