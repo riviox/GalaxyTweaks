@@ -17,7 +17,7 @@ header {
 header h1 {
     margin: 0;
     font-size: 2em;
-    color: #FF5555; /* Czerwony akcent */
+    color: #FF5555;
 }
 
 header p {
@@ -45,16 +45,16 @@ li {
 .download-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #FF5555; /* Czerwony akcent */
+    background-color: #FF5555;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    margin-right: 10px; /* Dodany odstęp między przyciskami */
+    margin-right: 10px;
 }
 
 .download-button:hover {
-    background-color: #CC0000; /* Ciemniejszy czerwony przy najechaniu */
+    background-color: #CC0000;
 }
 
 footer {
