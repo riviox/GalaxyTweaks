@@ -1,3 +1,5 @@
+import org.jetbrains.compose.desktop.application.dsl.NativeApplicationDistributions
+import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 
 plugins {
@@ -19,6 +21,18 @@ kotlin {
                 implementation(compose.desktop.currentOs)
                 implementation(project(":App:Common"))
             }
+        }
+    }
+}
+
+compose.desktop {
+    application {
+        mainClass = "MainKt"
+
+        nativeDistributions {
+            packageName = "Galaxy Tweaks"
+            packageVersion = "4.0.0"
+            targetFormats = setOf(TargetFormat.Exe)
         }
     }
 }
