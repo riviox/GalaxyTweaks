@@ -1,0 +1,68 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #fff;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 2px solid #555;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #FF5555; /* Czerwony akcent */
+}
+
+header p {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+}
+
+section {
+    padding: 20px;
+}
+
+h2 {
+    color: #eee;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FF5555; /* Czerwony akcent */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-right: 10px; /* Dodany odstęp między przyciskami */
+}
+
+.download-button:hover {
+    background-color: #CC0000; /* Ciemniejszy czerwony przy najechaniu */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
