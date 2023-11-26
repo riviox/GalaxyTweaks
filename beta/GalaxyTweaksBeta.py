@@ -52,25 +52,25 @@ def check_for_update():
                 break
 
         if local != new_version:
-        print(f"Your Version: {local}")
-        print(f"New version: {new_version}")
-        print("Note: You don't have to install pre-releases.")
-        choice = input("Do you want to update? (y/n): ")
-        if choice.lower() == 'y':
-            with open(__file__, 'wb') as file:
-                file.write(response.content)
+            print(f"Your Version: {local}")
+            print(f"New version: {new_version}")
+            print("Note: You don't have to install pre-releases.")
+            choice = input("Do you want to update? (y/n): ")
+            if choice.lower() == 'y':
+                with open(__file__, 'wb') as file:
+                    file.write(response.content)
 
-            menu_html_url = "https://raw.githubusercontent.com/RivioxGaming/GalaxyFPS/main/beta/gui/menu.html"
-            menu_html_response = requests.get(menu_html_url)
-            
-            if menu_html_response.status_code == 200:
-                menu_html_file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "gui", "menu.html")
-                with open(menu_html_file_path, 'wb') as menu_html_file:
-                    menu_html_file.write(menu_html_response.content)
+                menu_html_url = "https://raw.githubusercontent.com/RivioxGaming/GalaxyFPS/main/beta/gui/menu.html"
+                menu_html_response = requests.get(menu_html_url)
+                
+                if menu_html_response.status_code == 200:
+                    menu_html_file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "gui", "menu.html")
+                    with open(menu_html_file_path, 'wb') as menu_html_file:
+                        menu_html_file.write(menu_html_response.content)
 
-            python = sys.executable
-            os.execl(python, python, *sys.argv)
-            exit()
+                python = sys.executable
+                os.execl(python, python, *sys.argv)
+                exit()
 
 @eel.expose
 def perform_update():
