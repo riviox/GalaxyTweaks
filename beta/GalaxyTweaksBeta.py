@@ -7,7 +7,7 @@ from colorama import Fore, init
 import eel
 
 init(autoreset=True)
-local = "3.8 BETA"
+local = "3.8.1 BETA"
 
 print(Fore.GREEN + "Loading...")
 print(Fore.YELLOW + "This is GalaxyTweaks Output, do not close it!")
@@ -52,7 +52,17 @@ def check_for_update():
                 break
 
         if local != new_version:
-            eel.show_update_prompt(local, new_version)
+            print(f"Your Version: {local}")
+            print(f"New version: {new_version}")
+            print("Note: You don't have to install pre-releases.")
+            choice = input("Do you want to update? (y/n): ")
+            if choice.lower() == 'y':
+                with open(__file__, 'wb') as file:
+                    file.write(response.content)
+                
+                python = sys.executable
+                os.execl(python, python, *sys.argv)
+                exit()
 
 @eel.expose
 def perform_update():
