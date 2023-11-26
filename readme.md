@@ -4,3 +4,4 @@
 * multiplatform tweaks
 * tweaks store
 * adaptive UI
+# this project uses noto-color-emoji font, the license for the font is under OFL license, and the license is available at: licenses/noto-color-emoji.txt
