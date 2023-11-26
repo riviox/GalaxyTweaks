@@ -7,7 +7,7 @@ from colorama import Fore, init
 import eel
 
 init(autoreset=True)
-local = "3.6.4"
+local = "3.8 BETA"
 
 print(Fore.GREEN + "Loading...")
 print(Fore.YELLOW + "This is GalaxyTweaks Output, do not close it!")
