@@ -12,6 +12,7 @@ local = "3.6.4"
 # FUCK KOTLIN COMPOSE MULTIPLATFORM
 
 print(Fore.GREEN + "Loading...")
+print(Fore.YELLOW + "This is GalaxyTweaks Output, do not close it!")
 
 def run_as_admin():
     try:
@@ -67,8 +68,10 @@ def perform_update():
         python = sys.executable
         os.execl(python, python, *sys.argv)
         exit()
-
+        
+@eel.expose
 def mtw():
+    print(Fore.YELLOW + "Applying Main Tweaks...")
     os.system(r'''
     Reg.exe add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "SystemPages" /t REG_SZ /d "0" /f
     Reg.exe add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "PoolUsageMaximum" /t REG_SZ /d "00000060" /f
@@ -209,17 +212,23 @@ def mtw():
     Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control" /v "WaitToKillServiceTimeout" /t REG_SZ /d "2000" /f
     taskkill /f /im explorer.exe
     start explorer.exe
-''')
-
+    ''')
+    print(Fore.GREEN + "Applied Main Tweaks!")
+    
+@eel.expose
 def netw():
+    print(Fore.YELLOW + "Applying Internet Tweaks!")
     os.system('ipconfig /flushdns')
     os.system('ipconfig /registerdns')
     os.system('ipconfig /release')
     os.system('ipconfig /renew')
     os.system('netsh winsock reset')
+    print(Fore.GREEN + "Applied Internet Tweaks!")
     pass
-
+    
+@eel.expose
 def cleaner():
+    print(Fore.YELLOW + "Cleaning Temp Files...")
     os.system('cls')
     print("Cleaning temporary files...")
     os.system('timeout 3 >nul')
@@ -246,12 +255,19 @@ def cleaner():
     os.system('timeout 2 >nul')
     print("Returning to menu...")
     os.system('timeout 3 >nul')
+    print(Fore.GREEN + "Cleaned Temp files!")
     pass
-
+    
+@eel.expose
 def ocmd():
-    os.start("start")
-
+    print(Fore.YELLOW + "Starting CMD.exe...")
+    os.system("start")
+    print(Fore.GREEN + "Started CMD.exe!")
+    
+@eel.expose
 def adwt():
+    print(Fore.YELLOW + "Applying Advanced Tweaks..")
+    print(Fore.BLUE + "Downloading [advtweaks.reg]")
     reg_file_url = "https://raw.githubusercontent.com/RivioxGaming/GalaxyFPS/main/regs/advtweaks.reg"
     reg_file_name = "%temp%\\advtweaks.reg"
 
@@ -261,13 +277,21 @@ def adwt():
             reg_file.write(response.content)
 
         if os.path.exists(reg_file_name):
-            subprocess.run(["regedit", "/s", reg_file_name]) 
+            print(Fore.YELLOW + "Running advtweaks.reg")
+            subprocess.run(["regedit", "/s", reg_file_name])
+            print(Fore.GREEN + "Applied Advanced Tweaks!")
         else:
             pass
-
+    
+@eel.expose
 def regbckp():
+    print(Fore.YELLOW + "Making registry backup...")
     os.system('regedit.exe /e "C:\GalaxyFPSregbckp.reg"')
+    print(Fore.GREEN + "Registry backup is at `C:\regbckp.reg`!")
+        
+@eel.expose
 def dwmt():
+    print(Fore.YELLOW + "Applying DWM Tweaks...")
     os.system(r"""
     Reg.exe add "HKCU\Control Panel\Desktop\WindowMetrics" /v "MinAnimate" /t REG_SZ /d "0" /f
     Reg.exe add "HKCU\Control Panel\Desktop\WindowMetrics" /v "MaxAnimate" /t REG_SZ /d "0" /f
@@ -379,9 +403,8 @@ def dwmt():
     Reg.exe add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "UseHWInput" /t REG_DWORD /d "1" /f
     Reg.exe add "HKLM\SOFTWARE\Microsoft\Windows\Dwm\ExtendedComposition" /v "ExclusiveModeFramerateThresholdPercent" /t REG_DWORD /d "250" /f
     """)
+    print(Fore.GREEN + "Applied DWM Tweaks!")
     pass
-else:
-    print(f' [ {choice} ] is Invalid. Please try again.')
 
 if __name__ == '__main__':
     eel.init('web')
