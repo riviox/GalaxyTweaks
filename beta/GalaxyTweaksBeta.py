@@ -27,8 +27,8 @@ def run_as_admin():
 run_as_admin()
 
 temp_folder = os.environ['TEMP']
-temp_version_file = os.path.join(temp_folder, "gversion.txt")
-versionurl = "https://raw.githubusercontent.com/RivioxGaming/GalaxyFPS/main/version"
+temp_version_file = os.path.join(temp_folder, "bgversion.txt")
+versionurl = "https://raw.githubusercontent.com/RivioxGaming/GalaxyFPS/main/beta/version"
 
 if os.path.exists(temp_version_file):
     os.remove(temp_version_file)
@@ -40,7 +40,7 @@ if response.status_code == 200:
 
 @eel.expose
 def check_for_update():
-    update_url = "https://raw.githubusercontent.com/RivioxGaming/GalaxyFPS/main/GalaxyTweaks.py"
+    update_url = "https://raw.githubusercontent.com/RivioxGaming/GalaxyFPS/main/beta/GalaxyTweaksBeta.py"
     response = requests.get(update_url)
 
     if response.status_code == 200:
