@@ -419,5 +419,6 @@ def discord():
     os.system("start https://discord.gg/fpJxa2Gfa3")
 
 if __name__ == '__main__':
+    check_for_update()
     eel.init('gui')
     eel.start('menu.html', size=(600, 400))
