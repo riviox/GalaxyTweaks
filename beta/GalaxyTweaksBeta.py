@@ -40,7 +40,7 @@ if response.status_code == 200:
 
 @eel.expose
 def check_for_update():
-    update_url = "https://raw.githubusercontent.com/RivioxGaming/GalaxyFPS/main/GalaxyTweaks.py"
+    update_url = "https://raw.githubusercontent.com/RivioxGaming/GalaxyFPS/main/beta/GalaxyTweaksBeta.py"
     response = requests.get(update_url)
 
     if response.status_code == 200:
