@@ -404,6 +404,10 @@ def dwmt():
     print(Fore.GREEN + "Applied DWM Tweaks!")
     pass
 
+@eel.expose
+def discord():
+    os.system("start https://discord.gg/fpJxa2Gfa3")
+
 if __name__ == '__main__':
-    eel.init('web')
+    eel.init('gui')
     eel.start('menu.html', size=(600, 400))
