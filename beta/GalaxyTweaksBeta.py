@@ -40,7 +40,7 @@ if response.status_code == 200:
 
 @eel.expose
 def check_for_update():
-    update_url = "https://raw.githubusercontent.com/RivioxGaming/GalaxyFPS/main/beta/GalaxyTweaksBeta.py"
+    update_url = "https://raw.githubusercontent.com/RivioxGaming/GalaxyFPS/main/GalaxyTweaks.py"
     response = requests.get(update_url)
 
     if response.status_code == 200:
@@ -59,7 +59,14 @@ def check_for_update():
             if choice.lower() == 'y':
                 with open(__file__, 'wb') as file:
                     file.write(response.content)
-                
+
+                gui_url = "https://raw.githubusercontent.com/RivioxGaming/GalaxyFPS/main/beta/gui"
+                gui_response = requests.get(gui_url)
+                if gui_response.status_code == 200:
+                    gui_file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "gui")
+                    with open(gui_file_path, 'wb') as gui_file:
+                        gui_file.write(gui_response.content)
+
                 python = sys.executable
                 os.execl(python, python, *sys.argv)
                 exit()
