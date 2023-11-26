@@ -9,8 +9,6 @@ import eel
 init(autoreset=True)
 local = "3.6.4"
 
-# FUCK KOTLIN COMPOSE MULTIPLATFORM
-
 print(Fore.GREEN + "Loading...")
 print(Fore.YELLOW + "This is GalaxyTweaks Output, do not close it!")
 
