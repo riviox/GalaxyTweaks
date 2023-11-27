@@ -66,3 +66,14 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+#scrnst {
+    height: 400px;
+    border-radius: 1.2rem;
+    border: #FF5555;
+    border-style: dashed;
+}
+
+#screenshots {
+    margin-bottom: 100px;
+}
