@@ -5,6 +5,7 @@ import sys
 import subprocess
 from colorama import Fore, init
 import eel
+import json
 
 init(autoreset=True)
 local = "3.8.2 BETA"
@@ -262,27 +263,21 @@ def mtw():
 
 @eel.expose
 def getTweaksList():
+    tweaks_list_url = "https://raw.githubusercontent.com/RivioxGaming/GalaxyFPS/main/tweaks/tweaks.json"
     tweaks_folder = 'https://raw.githubusercontent.com/RivioxGaming/GalaxyFPS/main/tweaks'
     tweaks_list = []
-
     try:
-        response = eel.get(f'{tweaks_folder}/').text
-        tweaks_files = [f for f in response.split('\n') if f.endswith('.json')]
-
-        for file in tweaks_files:
-            tweak_url = f'{tweaks_folder}/{file}'
-            tweak_content = eel.get(tweak_url).text
-
-            try:
-                tweak_data = json.loads(tweak_content)
-                tweaks_list.append(tweak_data)
-            except json.JSONDecodeError:
-                print(f"Error decoding JSON from file: {file}")
+        response = requests.get(tweaks_list_url)
+        response.raise_for_status()
+        tweaks_list = response.json()
+    except requests.RequestException as e:
+        print(f"Error fetching tweaks list: {e}")
+        tweaks_list = []
 
     except Exception as e:
         print(f"Error fetching tweaks list: {e}")
 
-    return tweaks_list
+        return tweaks_list
 
 @eel.expose
 def runTweak(url):
