@@ -7,10 +7,39 @@ from colorama import Fore, init
 import eel
 
 init(autoreset=True)
-local = "3.8.1 BETA"
+local = "3.8.2 BETA"
 
 print(Fore.GREEN + "Loading...")
 print(Fore.YELLOW + "This is GalaxyTweaks Output, do not close it!")
+
+def get_html_from_github(file_url):
+    try:
+        response = requests.get(file_url)
+        response.raise_for_status()
+        return response.text
+    except requests.RequestException as e:
+        print(f"Error: {e}")
+        return None
+
+embedded_menu_html = get_html_from_github("https://raw.githubusercontent.com/RivioxGaming/GalaxyFPS/main/beta/gui/menu.html")
+
+if not embedded_menu_html:
+    print("Error: Failed to fetch HTML content from GitHub.")
+    print("Exiting...")
+username = os.getenv("username")
+menu_folder = f"C:\\GalaxyTweaks"
+menu = os.path.join(menu_folder, "menu.html")
+
+if not os.path.exists(menu_folder):
+    os.makedirs(menu_folder)
+
+with open(menu, 'w', encoding='utf-8') as html_file:
+    html_file.write(embedded_menu_html)
+
+if not embedded_menu_html:
+    print("Error: Failed to fetch HTML content from GitHub.")
+    print("Exiting...")
+    exit()
 
 def run_as_admin():
     try:
@@ -74,7 +103,7 @@ def check_for_update():
 
 @eel.expose
 def perform_update():
-    update_url = "https://raw.githubusercontent.com/RivioxGaming/GalaxyFPS/main/GalaxyTweaks.py"
+    update_url = "https://raw.githubusercontent.com/RivioxGaming/GalaxyFPS/main/beta/GalaxyTweaksBeta.py"
     response = requests.get(update_url)
 
     if response.status_code == 200:
@@ -303,7 +332,7 @@ def adwt():
 def regbckp():
     print(Fore.YELLOW + "Making registry backup...")
     os.system('regedit.exe /e "C:\GalaxyFPSregbckp.reg"')
-    print(Fore.GREEN + "Registry backup is at `C:\regbckp.reg`!")
+    print(Fore.GREEN + "Registry backup is at `C:\\regbckp.reg`!")
         
 @eel.expose
 def dwmt():
@@ -428,5 +457,7 @@ def discord():
 
 if __name__ == '__main__':
     check_for_update()
-    eel.init('gui')
+    rp = os.path.abspath(menu.strip("menu.html"))
+    eel.root_path = rp
+    eel.init(rp)
     eel.start('menu.html', size=(600, 400))
