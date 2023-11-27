@@ -26,3 +26,6 @@ pyinstaller --onefile GalaxyFPS.py
 ```
 #### .exe file will be in dist folder!
 ## If you found any bug send it [here](https://discord.gg/XuhVNtyBYM)!
+
+##### counter
+##### ![counter](https://profile-counter.glitch.me/RivioxGaming_GalaxyTweaks/count.svg)
