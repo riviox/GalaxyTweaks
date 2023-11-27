@@ -259,7 +259,41 @@ def mtw():
     start explorer.exe
     ''')
     print(Fore.GREEN + "Applied Main Tweaks!")
-    
+
+@eel.expose
+def getTweaksList():
+    tweaks_folder = 'https://raw.githubusercontent.com/RivioxGaming/GalaxyFPS/main/tweaks'
+    tweaks_list = []
+
+    try:
+        response = eel.get(f'{tweaks_folder}/').text
+        tweaks_files = [f for f in response.split('\n') if f.endswith('.json')]
+
+        for file in tweaks_files:
+            tweak_url = f'{tweaks_folder}/{file}'
+            tweak_content = eel.get(tweak_url).text
+
+            try:
+                tweak_data = json.loads(tweak_content)
+                tweaks_list.append(tweak_data)
+            except json.JSONDecodeError:
+                print(f"Error decoding JSON from file: {file}")
+
+    except Exception as e:
+        print(f"Error fetching tweaks list: {e}")
+
+    return tweaks_list
+
+@eel.expose
+def runTweak(url):
+    parsed_url = urlparse(url)
+
+    if parsed_url.scheme:
+        os.system(f'start {url}')
+    else:
+        print(f"Invalid URL: {url}")
+
+
 @eel.expose
 def netw():
     print(Fore.YELLOW + "Applying Internet Tweaks!")

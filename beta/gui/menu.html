@@ -49,13 +49,25 @@
             background: #FF5555; 
         }
 
+        .tweaks-shop-button {
+            background: #4285f4; 
+        }
+
+        .tweaks-shop-button:hover {
+            background: #3367d6; 
+        }
+
         txt {
             color: #696969;
+        }
+
+        #tweaks-list {
+            margin-top: 20px;
+            text-align: left;
         }
     </style>
     <script src="eel.js"></script>
     <script>
-
         function mt() {
             eel.mt()();
         }
@@ -87,6 +99,27 @@
         function discord() {
             eel.discord()();
         }
+
+        function openTweaksShop() {
+            eel.getTweaksList()(function(response) {
+                displayTweaks(response);
+            });
+        }
+
+        function displayTweaks(tweaks) {
+            var tweaksList = document.getElementById('tweaks-list');
+            tweaksList.innerHTML = '';
+
+            tweaks.forEach(function(tweak) {
+                var tweakButton = document.createElement('button');
+                tweakButton.textContent = tweak.name;
+                tweakButton.onclick = function() {
+                    eel.runTweak(tweak.url)();
+                };
+
+                tweaksList.appendChild(tweakButton);
+            });
+        }
     </script>
 </head>
 <body>
@@ -100,8 +133,10 @@
         <button onclick="dwmt()">DWM Tweaks</button>
         <button onclick="ocmd()">Open CMD</button>
         <button onclick="discord()">Discord</button>
+        <button class="tweaks-shop-button" onclick="openTweaksShop()">Tweaks Library</button>
         <button class="exit-button" onclick="handleChoice(0)">Exit</button>
     </div>
+    <div id="tweaks-list"></div>
     <txt>Made by .riviox</txt>
 </body>
 </html>
