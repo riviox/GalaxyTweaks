@@ -6,7 +6,7 @@ import subprocess
 from colorama import Fore, init
 
 init(autoreset=True)
-local = "3.6.5"
+local = "3.6.6"
 
 print(Fore.GREEN + "Loading...")
 
@@ -26,7 +26,7 @@ run_as_admin()
 
 temp_folder = os.environ['TEMP']
 temp_version_file = os.path.join(temp_folder, "gversion.txt")
-versionurl = "https://raw.githubusercontent.com/RivioxGaming/GalaxyFPS/main/version"
+versionurl = "https://raw.githubusercontent.com/RivioxGaming/GalaxyTweaks/main/version"
 
 if os.path.exists(temp_version_file):
     os.remove(temp_version_file)
