@@ -131,3 +131,7 @@ footer {
 #docs a:hover {
     color: #fff;
 }
+
+::-webkit-scrollbar {
+    width: 0px;
+}
