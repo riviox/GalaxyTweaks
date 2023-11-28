@@ -6,7 +6,7 @@ import subprocess
 from colorama import Fore, init
 
 init(autoreset=True)
-local = "3.6.6"
+local = "3.6.5"
 
 print(Fore.GREEN + "Loading...")
 
@@ -26,7 +26,7 @@ run_as_admin()
 
 temp_folder = os.environ['TEMP']
 temp_version_file = os.path.join(temp_folder, "gversion.txt")
-versionurl = "https://raw.githubusercontent.com/RivioxGaming/GalaxyTweaks/main/version"
+versionurl = "https://raw.githubusercontent.com/RivioxGaming/GalaxyFPS/main/version"
 
 if os.path.exists(temp_version_file):
     os.remove(temp_version_file)
@@ -39,19 +39,24 @@ if response.status_code == 200:
 
 
 def update(local):
-    update_url = "https://raw.githubusercontent.com/RivioxGaming/GalaxyFPS/main/bin/GalaxyTweaks.exe"
+    update_url = "https://raw.githubusercontent.com/RivioxGaming/GalaxyFPS/main/GalaxyTweaks.py"
     response = requests.get(update_url)
     
     if response.status_code == 200:
         new_version = local
+        script_lines = response.text.splitlines()
+        for line in script_lines:
+            if line.startswith('local ='):
+                new_version = line.split('=')[1].strip().replace('"', '')
+                break
+
         if local != new_version:
             print(f"Your Version: {local}")
             print(f"New version: {new_version}")
             print("Note: You don't have to install pre-releases.")
             choice = input("Do you want to update? (y/n): ")
             if choice.lower() == 'y':
-                new_executable_path = os.path.join(os.path.dirname(__file__), "GalaxyTweaks.exe")
-                with open(new_executable_path, 'wb') as file:
+                with open(__file__, 'wb') as file:
                     file.write(response.content)
                 
                 python = sys.executable
