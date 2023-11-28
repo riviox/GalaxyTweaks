@@ -6,7 +6,7 @@ import subprocess
 from colorama import Fore, init
 
 init(autoreset=True)
-local = "3.6.4"
+local = "3.6.5"
 
 print(Fore.GREEN + "Loading...")
 
@@ -39,24 +39,19 @@ if response.status_code == 200:
 
 
 def update(local):
-    update_url = "https://raw.githubusercontent.com/RivioxGaming/GalaxyFPS/main/GalaxyTweaks.py"
+    update_url = "https://raw.githubusercontent.com/RivioxGaming/GalaxyFPS/main/bin/GalaxyTweaks.exe"
     response = requests.get(update_url)
     
     if response.status_code == 200:
         new_version = local
-        script_lines = response.text.splitlines()
-        for line in script_lines:
-            if line.startswith('local ='):
-                new_version = line.split('=')[1].strip().replace('"', '')
-                break
-
         if local != new_version:
             print(f"Your Version: {local}")
             print(f"New version: {new_version}")
             print("Note: You don't have to install pre-releases.")
             choice = input("Do you want to update? (y/n): ")
             if choice.lower() == 'y':
-                with open(__file__, 'wb') as file:
+                new_executable_path = os.path.join(os.path.dirname(__file__), "GalaxyTweaks.exe")
+                with open(new_executable_path, 'wb') as file:
                     file.write(response.content)
                 
                 python = sys.executable
