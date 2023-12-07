@@ -280,16 +280,6 @@ def getTweaksList():
         return tweaks_list
 
 @eel.expose
-def runTweak(url):
-    parsed_url = urlparse(url)
-
-    if parsed_url.scheme:
-        os.system(f'start {url}')
-    else:
-        print(f"Invalid URL: {url}")
-
-
-@eel.expose
 def netw():
     print(Fore.YELLOW + "Applying Internet Tweaks!")
     os.system('ipconfig /flushdns')
