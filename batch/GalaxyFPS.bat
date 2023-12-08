@@ -41,7 +41,7 @@ echo.
 	%SystemRoot%\System32\choice.exe /c:YN /n /m "%DEL% >"                         
 	set choice=!errorlevel!
 	if !choice! == 1 (
-		curl -L -o %0 "https://raw.githubusercontent.com/RivioxGaming/GalaxyFPS/main/GalaxyFPS.py" >nul 2>&1
+		curl -L -o %0 "https://raw.githubusercontent.com/RivioxGaming/GalaxyTweaks/main/GalaxyTweaks.py" >nul 2>&1
 		python -c "GalaxyFPS.py"
 		exit /b
 	)
