@@ -48,6 +48,5 @@ $(document).ready(function() {
 
     $(window).scroll(updateVisibility);
 
-    // Inicjalizacja animacji po załadowaniu strony
     $(window).scroll();
 });
