@@ -2,9 +2,6 @@
 mode 105,30
 setlocal EnableDelayedExpansion
 set local=1.3 pre-release [ Last before python ] 
-echo x=msgbox("Note that you must run GalaxyFPS as an administrator for the changes to take effect on your system. Else there will be no changes on your system",16,"GalaxyFPS v1.2")> info.vbs
-inf.vbs
-del inf.vbs
 :update
 cls
 setlocal EnableDelayedExpansion
@@ -15,10 +12,10 @@ call "%temp%\galaxyupdate.bat"
 if "%local%" gtr "%localtwo%" (
 
 echo.
-set string="[95m   _   _           _       _         _____                     _ 
-set string2="[95m  | | | |_ __   __| | __ _| |_ ___  |  ___|__  _   _ _ __   __| |		  | Your Version: %localtwo%
-set string3="[95m  | | | | '_ \ / _` |/ _` | __/ _ \ | |_ / _ \| | | | '_ \ / _` |       | New version: %local%
-set string4="[95m  | |_| | |_) | (_| | (_| | ||  __/ |  _| (_) | |_| | | | | (_| |       | Install latest release!
+set string="[95m    _   _           _       _         _____                     _ 
+set string2="[95m  | | | |_ __   __| | __ _| |_ ___  |  ___|__  _   _ _ __   __| |
+set string3="[95m  | | | | '_ \ / _` |/ _` | __/ _ \ | |_ / _ \| | | | '_ \ / _` |       | Your Version: %localtwo%
+set string4="[95m  | |_| | |_) | (_| | (_| | ||  __/ |  _| (_) | |_| | | | | (_| |       | New version: %local%
 set string5="[95m   \___/| .__/ \__,_|\__,_|\__\___| |_|  \___/ \__,_|_| |_|\__,_|       | Note: You don't have to install pre-releases.
 set string6="[95m        |_|                                   
 
@@ -36,13 +33,12 @@ echo !string5!
 echo !string6!
 echo                [95m y - Update     
 echo                [95m n - Go to Menu 
-echo                [95m YOU MUST HAVE PYTHON INSTALLED FOR LATEST RELEASES
 echo.
 	%SystemRoot%\System32\choice.exe /c:YN /n /m "%DEL% >"                         
 	set choice=!errorlevel!
 	if !choice! == 1 (
-		curl -L -o %0 "https://raw.githubusercontent.com/RivioxGaming/GalaxyTweaks/main/GalaxyTweaks.py" >nul 2>&1
-		python -c "GalaxyFPS.py"
+		curl -L -o %0 "https://github.com/RivioxGaming/GalaxyFPS/releases/latest/GalaxyFPS.bat" >nul 2>&1
+		call %0
 		exit /b
 	)
 )
