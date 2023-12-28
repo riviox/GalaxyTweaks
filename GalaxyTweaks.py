@@ -8,7 +8,7 @@ import customtkinter as ctk
 
 
 init(autoreset=True)
-local = "3.7.1"
+local = "3.7.2"
 
 print(Fore.GREEN + "Loading...")
 
@@ -28,7 +28,7 @@ run_as_admin()
 
 temp_folder = os.environ['TEMP']
 temp_version_file = os.path.join(temp_folder, "gversion.txt")
-versionurl = "https://raw.githubusercontent.com/riviox/GalaxyTweaks/main/version"
+versionurl = "https://raw.githubusercontent.com/GalaxyTweaks/GalaxyTweaks/main/version"
 
 if os.path.exists(temp_version_file):
     os.remove(temp_version_file)
@@ -41,7 +41,7 @@ if response.status_code == 200:
 
 
 def update(local):
-    update_url = "https://raw.githubusercontent.com/riviox/GalaxyTweaks/main/GalaxyTweaks.py"
+    update_url = "https://raw.githubusercontent.com/GalaxyTweaks/GalaxyTweaks/main/GalaxyTweaks.py"
     response = requests.get(update_url)
     
     if response.status_code == 200:
